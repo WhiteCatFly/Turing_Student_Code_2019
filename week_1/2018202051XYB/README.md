@@ -5,7 +5,8 @@ Homework1 (2019.3.15)
 
 ## Usage
 ```
-$ make
+make
+./run
 ```
 
 ## Known Issues 
