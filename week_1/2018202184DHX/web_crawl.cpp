@@ -17,9 +17,6 @@ using namespace std;
 std::string page_content;
 void UrlToFile(string current_url,int count)                    //wget page file
 {
-    //string tem;
-    //tem = "wget " + current_url + " -O ./test/" + std::to_string(count) + ".html";
-    //const char * Put_in = tem.data();
     cout << "Now the Put In is :" << ("wget \"" + current_url + "\" -O " + std::to_string(count) + ".html").c_str() << endl;
     system(("wget \"" + current_url + "\" -O " + std::to_string(count) + ".html").c_str());
     return;
@@ -35,7 +32,6 @@ void FileToString(int count)                                    //store the cont
     while(c != EOF){
         page_content.push_back(c);
         c = fgetc(fp);
-        //printf("%c",c);
     }
     fclose(fp);
     return ;
@@ -44,7 +40,6 @@ void FileToString(int count)                                    //store the cont
 
 int main()
 {
-    //system("makedir test");
     std::queue <string> url_to_be_crawled;
     std::set <string> url_already_crawled;
     std::string current_url = "info.ruc.edu.cn";
@@ -55,7 +50,6 @@ int main()
 
     std::regex regex ("%*(href=\")([^\"]*)");
     std::smatch res;
-    std::string str;
 
     url_already_crawled.insert(current_url);
     url_already_crawled.insert("info.ruc.edu.cn/index.php");
@@ -72,7 +66,6 @@ int main()
         //printf("%s\n",page_content);
         while(regex_search(page_content,res,regex))
         {
-            cout << "Now Res is " << res[2].str() << ' ';
             for(int x = 0; x < 6; x++)
             {
                 if(res[2].str().find(BlackList[x],0) != res[2].str().npos)
@@ -87,20 +80,16 @@ int main()
             }
             else if(res[2].str().find("http:\/\/",0) != res[2].str().npos)          
             {
-                cout << "Abosolute" << endl;
                 str = res[2].str();
                 str.erase(str.begin(),str.begin() + 7);
                 if(str.find("info.ruc.edu.cn",0) != str.npos)
                 {
-                    cout << "INFO" << endl;
                     if(url_already_crawled.find(str) == url_already_crawled.end())
                     {
                         url_to_be_crawled.push(str);
                         url_already_crawled.insert(str);
-                        cout << "Saved" << str << endl;
                     }
                 }
-                else cout << "Not INFO" << endl;
             }
             else
             {
@@ -108,7 +97,6 @@ int main()
                 tempo.clear();
                 if(res[2].str().find(".php",0) != res[2].str().npos)
                 {
-                    cout << "INAbosolute  Plan1" << endl;
                     if(*res[2].str().begin() == '/')    
                     {
                         tempo = "info.ruc.edu.cn" + res[2].str();
@@ -121,12 +109,10 @@ int main()
                     {
                         url_to_be_crawled.push(tempo);
                         url_already_crawled.insert(tempo);
-                        cout << "Saved" << str << endl;
                     }
                 }
                 else if(res[2].str().find(".html",0) != res[2].str().npos)
                 {
-                    cout << "INAbosolute  Plan2" << endl;
                     if(*res[2].str().begin() == '/')    
                     {
                         tempo = "info.ruc.edu.cn" + res[2].str();
@@ -139,7 +125,6 @@ int main()
                     {
                         url_to_be_crawled.push(tempo);
                         url_already_crawled.insert(tempo);
-                        cout << "Saved" << str << endl;
                     }
                 }
                 else if(res[2].str().find('.',0) == res[2].str().npos)
@@ -156,7 +141,6 @@ int main()
                     {
                         url_to_be_crawled.push(tempo);
                         url_already_crawled.insert(tempo);
-                        cout << "Saved" << str << endl;
                     }
                 }
             }
