@@ -1,12 +1,12 @@
-#Homework 1
+# Homework 1
 crawler for the http://info.ruc.edu.cn
 
-##Usage
+## Usage
 ```
 make
 ./crawl
 ```
-##Result
+## Result
 ```
 6640 pages downloaded  ----  637.5s used
 finished!  total: 6643 pages
