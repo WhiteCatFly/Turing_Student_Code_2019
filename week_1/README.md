@@ -1,13 +1,9 @@
-# Turing_Student_Code_2019
+Homework1 
 --
-* Student Code for Turing class 2019
+* 文件夹中仅包含源码和说明文档
 
-* 在每次作业文件夹下新建自己的文件夹，命名方式学号+姓名大写字母缩写，例如2016202202FNX
+* 超过1M将被拒绝
 
-* 在自己的文件夹下新建src文件夹作为本次作业的源码根目录，存放源码和Makefile。另外在自己的文件夹下编写README说明文档
+* 文件夹命名为学号+姓名大写首字母 例如 2016202202FNX
 
-* README支持txt和md文档。
-
-* If you have any question, please contact us
-
-* email: whitycatty@gmail.com
+* 个人作业文件夹中包含README说明文档和src源码文件夹
