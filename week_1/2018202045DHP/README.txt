@@ -1,4 +1,4 @@
-// 没写过.md这玩意，就写个txt文档凑合一下README好了 qwq
+﻿// 没写过.md这玩意，就写个txt文档凑合一下README好了 qwq
 
 本说明档用于解释代码思路与运行方式，以及一些运行数据的汇总。
 
@@ -13,3 +13,7 @@ extracter.cpp 可以提取下载网页中的url，丢进一个临时的 queue �
 filter.cpp 用于处理相对/绝对路径，并过滤掉部分不需要的文件。
 
 总计 ：爬取网页 6500+  用时 18'17"  网页源码总大小 114MB
+
+update log --- file added at 3.21
+
+窝之前忘记把 internetworm.h 提交了qwq，这里加一下。
