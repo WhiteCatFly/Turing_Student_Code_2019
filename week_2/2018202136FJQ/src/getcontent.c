@@ -34,7 +34,7 @@ void getContent(string url)
                         location_end = file.find(url_format2,location_first+9);
                         len = location_end-location_first-9;
                         url_to_be_finded = file.substr(location_first+9,len);
-                        if(url_to_be_finded.find("http://info.ruc.edu.cn") != string::npos)
+                        if(url_to_be_finded.find(root) != string::npos)
                         {
                                 if(url_already_be_crawled.find(url_to_be_finded) == url_already_be_crawled.end())
                                 {
@@ -47,13 +47,13 @@ void getContent(string url)
                                 int loc = url_to_be_finded.find("/");
                                 string url_to_be_finded_part;
                                 if(loc == 0)
-                                url_to_be_finded = "http://info.ruc.edu.cn"+url_to_be_finded;
+                                url_to_be_finded = root+url_to_be_finded;
                                 else if(loc == string::npos)
-                                url_to_be_finded = "http://info.ruc.edu.cn/"+url_to_be_finded;
+                                url_to_be_finded = root + "/" + url_to_be_finded;
                                 else
                                 {
                                         url_to_be_finded_part = url_to_be_finded.substr(0,loc);
-                                        url_to_be_finded = "http://info.ruc.edu.cn/"+url_to_be_finded_part;
+                                        url_to_be_finded = root + "/" + url_to_be_finded_part;
                                 }
                                 if(url_already_be_crawled.find(url_to_be_finded) == url_already_be_crawled.end())
                                 {
@@ -66,21 +66,5 @@ void getContent(string url)
                 }
         }
         return;
-}
-void deep_search(void)
-{
-        while(!url_to_be_crawled.empty())
-        {
-                current_url = url_to_be_crawled.front();
-                url_to_be_crawled.pop();
-                if(url_already_be_crawled.find(current_url) == url_already_be_crawled.end())
-                {
-                        number++;
-                        getContent(current_url);
-                }
-                url_already_be_crawled.insert(current_url);
-        }
-	cout << number << endl;
-        return ;
 }
 
