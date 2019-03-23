@@ -11,11 +11,11 @@
 const std::string BASE = "http://info.ruc.edu.cn/";
 
 void bfs(int num = 20); // num stands for the number of threads
-std::string getCurrent();
-void crawl(std::string url);
+std::string getCurrent(); // get the current url in queue
+void crawl(std::string url); // given an url, crawl it and push its urls into queue
 
-std::mutex mt;
-std::queue<std::string> q;
+std::mutex mt; // lock
+std::queue<std::string> q; // queue
 std::set<std::string> urlSet; //visied urls
 
 
@@ -42,7 +42,7 @@ void crawl(std::string url){
 	const std::string pattern = "href=\"([^\"]+)\"";
 
 
-	if(url.length() < 23) return;
+	if(url.length() < BASE.length()) return;
 	filename = url.length() == BASE.length() ? "index.html" : url.substr(BASE.length()); 
 	strReplace(filename, '/', '_');
 
