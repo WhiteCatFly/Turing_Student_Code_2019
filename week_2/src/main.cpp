@@ -8,7 +8,9 @@
 #include "spiderFile.h"
 #include "spiderWeb.h"
 
-void bfs();
+const std::string BASE = "http://info.ruc.edu.cn/";
+
+void bfs(int num = 20); // num stands for the number of threads
 std::string getCurrent();
 void crawl(std::string url);
 
@@ -19,7 +21,7 @@ std::set<std::string> urlSet; //visied urls
 
 int main(){
 	std::cout << "Start spider\n";
-	q.push("http://info.ruc.edu.cn/");
+	q.push(BASE);
 	bfs();
 	return 0;
 }
@@ -41,7 +43,7 @@ void crawl(std::string url){
 
 
 	if(url.length() < 23) return;
-	filename = url.length() == 23 ? "index.html" : url.substr(23); 
+	filename = url.length() == BASE.length() ? "index.html" : url.substr(BASE.length()); 
 	strReplace(filename, '/', '_');
 
 	getUrl(filename, url);
@@ -64,16 +66,16 @@ void crawl(std::string url){
 	mt.unlock();
 }
 
-void bfs(){
+void bfs(int num){
 	using std::string;
 	using std::cout;
 	std::thread *T;
 	while(!q.empty()){
-		T = new std::thread[20];
-		for(int i = 0; i < 20; i++){
+		T = new std::thread[num];
+		for(int i = 0; i < num; i++){
 			T[i] = std::thread {crawl, getCurrent()};
 		}
-		for(int i = 0; i < 20; i++){
+		for(int i = 0; i < num; i++){
 			T[i].join();
 		}
 		delete [] T;
