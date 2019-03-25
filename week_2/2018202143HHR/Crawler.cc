@@ -12,12 +12,12 @@
 #include "Utility.h"
 #include "TerminalColor.h"
 
-const Url root("http://econ.ruc.edu.cn");
-AsyncRequestPool pool;
-std::set<std::string> urlSet;
-const std::regex reHref("href=\"(.*?)\"");
-size_t crawlRequest = 0, crawled = 0, crawlError = 0;
-std::list<std::pair<std::string, std::string>> errors;
+static const Url root("http://econ.ruc.edu.cn");
+static AsyncRequestPool pool;
+static std::set<std::string> urlSet;
+static const std::regex reHref("href=\"(.*?)\"");
+static size_t crawlRequest = 0, crawled = 0, crawlError = 0;
+static std::list<std::pair<std::string, std::string>> errors;
 
 void extractUrls(const std::string &str, const std::function<void(const std::string&)> &callback) {
     for (std::sregex_iterator it(str.begin(), str.end(), reHref); it != std::sregex_iterator(); it++) {
