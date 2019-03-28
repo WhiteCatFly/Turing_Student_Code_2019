@@ -1,0 +1,11 @@
+READ me
+非常抱歉我之前弄错了格式。GitHub这个东西太难用了....
+main.cpp 中包括主函数；
+claw.cpp 中包含函数的实现
+claw.h 中包括头文件和函数声明
+大体实现思路如下：
+BFS，用queue to be来存储需要爬的网页的网址。每次先通过get_content函数下载并提取当前网页的源代码到字符串中，通过parse函数和正则表达式从源代码中匹配找到urls，加入到一个set urls中。set clawed标记已经爬过的网页，每一个set urls中的网址在加入队列之前都要经set clawed 中查找以便判重。
+Get_content 函数每次每次将网址的源代码下载，并编号保存在当前目录之中，然后利用文件读入当前编号的html，进入到一个字符串中返回。
+Parse函数从get_content 返回的字符串中通过正则表达和smatch匹配网址，根据相对路径和绝对路径进行分类，将所有的网页存入set urls中的时候都转换为绝对路径。
+
+用时35min 爬取结果5454
