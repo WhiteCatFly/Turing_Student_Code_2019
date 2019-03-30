@@ -22,5 +22,5 @@ Crawled webs will be saved in the current working directory.
 # Description
 Class Request:  
 输入参数Url, 利用成员函数crawl下载, 通过getStatu查看是否成功下载, 若成功下载，可将下载的网页中的链接提取到Vector里面.  
-Struct Config: 
+Struct Config:  
 用来保存设置的结构体,既保存Request需要的参数(like web_base)，也保存主程序需要的参数(like num_thread).  
