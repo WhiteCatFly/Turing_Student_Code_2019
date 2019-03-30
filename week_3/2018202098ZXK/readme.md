@@ -1,6 +1,6 @@
 # Spider of RUC
-A navie spider that you can use your own config file.
-#Config
+A navie spider that you can use your own config file.  
+# Config
 Your config file should be like the default one  
 default.ini: #please ignore #  
 Web_Base=http://econ.ruc.edu.cn/ #must has the ending char /  
