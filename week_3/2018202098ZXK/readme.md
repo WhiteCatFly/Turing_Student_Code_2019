@@ -4,7 +4,7 @@ A navie spider that you can use your own config file.
 Your config file should be like the default one  
 default.ini: #please ignore #  
 Web_Base=http://econ.ruc.edu.cn/ #must has the ending char /  
-Num_Thread=100 #number of threads  
+Num_Thread=40 #number of threads  
 Time_Sleep=300 #in microseconds  
 Num_Tries=2 #try at most 2 times  
 Time_Out=2 #in seconds  
@@ -18,3 +18,9 @@ $ make
 # Output
 
 Crawled webs will be saved in the current working directory.
+
+# Description
+Class Request:  
+输入参数Url, 利用成员函数crawl下载, 通过getStatu查看是否成功下载, 若成功下载，可将下载的网页中的链接提取到Vector里面.  
+Struct Config: 
+用来保存设置的结构体,既保存Request需要的参数(like web_base)，也保存主程序需要的参数(like num_thread).  
