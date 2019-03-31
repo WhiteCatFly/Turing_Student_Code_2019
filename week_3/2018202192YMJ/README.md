@@ -10,7 +10,7 @@ The number of crawled webs and time used will be written to 'crawler-log', the s
 
 For http://info.ruc.edu.cn, a total number of 6746 webs can be crawled.
 
-For http://econ.ruc.edu.cn, a total number of 7425 webs can be crawled.
+For http://econ.ruc.edu.cn, a total number of 7430 webs can be crawled.
 
 ## Usage
 
