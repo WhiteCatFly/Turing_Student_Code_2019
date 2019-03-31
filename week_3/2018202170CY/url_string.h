@@ -11,6 +11,7 @@ class Url_string
     public:
         Url_string(const string Ahead, const string False, const string Root):Ahead_(Ahead), False_(False), Root_(Root){};
         Url_string(){};
+        ~Url_string(){};
         string get_url(string &a_string);
         bool is_url(string &a_string);
         string get_direction(string &s);

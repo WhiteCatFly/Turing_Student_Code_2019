@@ -15,14 +15,14 @@ void Others::use_wget(string url, string direction)
 {
     for (int i = url.length() - 1; i >= 0; i--)
     {
-        if ((url[i] == '&' || url[i] == '(' || url[i] == ')') && url[i - 1] != '\\')
+        if (url[i] == '&' || url[i] == '(' || url[i] == ')')
         {
             url.insert(i, "\\");
         } 
     }
     for (int i = direction.length() - 1; i >= 0; i--)
     {
-        if ((direction[i] == '&' || direction[i] == '(' || direction[i] == ')') && direction[i - 1] != '\\')
+        if (direction[i] == '&' || direction[i] == '(' || direction[i] == ')')
         {
             direction.insert(i, "\\");
         } 

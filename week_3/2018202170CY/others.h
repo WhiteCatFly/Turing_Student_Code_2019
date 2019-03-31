@@ -10,6 +10,7 @@ class Others
     public:
         Others(const string Root, const string Store_direction):Root_(Root), Store_direction_(Store_direction){};
         Others(){};
+        ~Others(){};
         bool check1(string &str);
         void use_wget(string url, string direction);
         void true_url(string &direction, int num);

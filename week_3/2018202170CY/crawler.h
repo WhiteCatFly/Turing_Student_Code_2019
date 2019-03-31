@@ -12,7 +12,7 @@ class Crawler
         Url_string url_string;
         Others others;
     public:
-        
+        ~Crawler(){};
         Crawler(const string Root, const string Store_direction, const string False, const string Ahead):
             Root_(Root), Store_direction_(Store_direction), False_(False), Ahead_(Ahead)
         {

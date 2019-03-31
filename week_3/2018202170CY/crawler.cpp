@@ -40,7 +40,7 @@ bool Crawler::solve_a_line(string &one_line, string &direction)
             else
             now = Root_ + url;
         }
-        if (now.find(".html", 0) == string::npos && now.find(".php", 0) == string::npos)
+        if (now.find(".html", 0) == string::npos && now.find(".php", 0) == string::npos && now.find(".asp", 0) == string::npos)
         {
             if (now[now.length() - 1] != '/')
             now += '/';

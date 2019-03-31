@@ -22,6 +22,12 @@ string Url_string::get_url(string &a_string)
         }
         url += a_string[j];
     }
+    while (url[0] == '.' && url[1] == '/')
+    {
+        std::cout << url << " ";
+        url.erase(0, 2);
+        std::cout << url << "\n";
+    }
     return url;
 }
 
@@ -32,7 +38,8 @@ bool Url_string::is_url(string &a_string)
     {
         if (!others.check1(a_string)) return false;
     }
-    if (a_string.find(".html", 0) != string::npos || a_string.find(".php", 0) != string::npos) return true;
+    if (a_string.find(".html", 0) != string::npos || a_string.find(".php", 0) != string::npos 
+    || a_string.find(".asp", 0) != string::npos) return true;
     for (int i = a_string.length() - 1; i >= 0; i--)
     {
         if (a_string[i] == '.')
@@ -63,10 +70,11 @@ string Url_string::get_direction(string &url)
                 if (url[len - 1] != '/') url += "/";
                 return url;
             }
-            bool flag1 = 0, flag2 = 0;
+            bool flag1 = 0, flag2 = 0, flag3 = 0;
             if (url[i + 1] == 'h' && url[i + 2] == 't' && url[i + 3] == 'm' && url[i + 4] == 'l') flag1 = 1;
             if (url[i + 1] == 'p' && url[i + 2] == 'h' && url[i + 3] == 'p') flag2 = 1;
-            if (flag1 | flag2) 
+            if (url[i + 1] == 'a' && url[i + 2] == 's' && url[i + 3] == 'p') flag3 = 1;
+            if (flag1 | flag2 | flag3) 
             {
                 string direction;
                 int ed;
