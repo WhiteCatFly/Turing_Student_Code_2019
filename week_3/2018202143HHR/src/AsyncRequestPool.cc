@@ -239,7 +239,7 @@ void AsyncRequestPool::runEventLoop() {
                 close(request->fdStdoutWrite);
                 close(request->fdStderrWrite);
 
-                int returnCode = WEXITSTATUS(status);
+                const int returnCode = WEXITSTATUS(status);
 
                 StringEx errorMessage;
                 Url redirectedUrl;

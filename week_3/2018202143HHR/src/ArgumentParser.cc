@@ -165,7 +165,7 @@ ArgumentParser &ArgumentParser::parse() {
     bool skipAnyLikeOption = false;
     size_t positionalIndex = 0;
     for (size_t i = 1; i < argc; i++) {
-        StringEx curr = argv[i];
+        const StringEx curr = argv[i];
 
         std::shared_ptr<Argument> arg;
         StringEx name;

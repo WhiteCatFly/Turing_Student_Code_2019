@@ -4,7 +4,7 @@
 #include "Crawler.h"
 
 bool Crawler::checkDuplicate(const Url &url) {
-    StringEx str = url.toString();
+    const StringEx str = url.toString();
     if (this->crawledUrlSet.count(str)) return true;
     this->crawledUrlSet.insert(str);
     return false;
@@ -43,7 +43,7 @@ void Crawler::savePage(const Url &url, const StringEx &data) {
     StringEx pathString = this->saveDirectory + '/' + url.host + url.path + url.query;
     if (pathString.back() == '/') pathString += indexSaveFilename;
 
-    std::filesystem::path path = (std::string)pathString;
+    const std::filesystem::path path = (std::string)pathString;
     std::filesystem::create_directories(path.parent_path());
 
     std::ofstream fout(pathString);

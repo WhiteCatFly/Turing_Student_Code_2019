@@ -51,7 +51,7 @@ Arguments parseArguments(int argc, char *argv[]) {
                    ArgumentParser::stringParser(arguments.requestOptions.wgetCommand, [](const StringEx &path) -> std::optional<StringEx> {
                        // Check if wget is available.
                        constexpr int EXIT_WGET_UNAVAILABLE = 127;
-                       pid_t pid = vfork();
+                       const pid_t pid = vfork();
                        if (pid < 0) {
                            perror("vfork");
                            abort();

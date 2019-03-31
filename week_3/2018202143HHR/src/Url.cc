@@ -5,7 +5,7 @@
 #include "Url.h"
 
 Url::Url(StringEx url) : origin(url) {
-    bool isFixed = parseUrl(url);
+    const bool isFixed = parseUrl(url);
     if (!(isFixed && !protocol.empty() && !host.empty() && isalpha(protocol[0]))) {
         std::cout << url << std::endl;
         throw std::logic_error("Invalid url: " + url);
@@ -15,7 +15,7 @@ Url::Url(StringEx url) : origin(url) {
 }
 
 Url::Url(StringEx url, const Url &referer) : origin(url) {
-    bool isFixed = parseUrl(url);
+    const bool isFixed = parseUrl(url);
 
     if (protocol.empty() || host.empty() || !isalpha(protocol[0])) {
         protocol = referer.protocol;
@@ -23,7 +23,7 @@ Url::Url(StringEx url, const Url &referer) : origin(url) {
     }
 
     if (!isFixed) {
-        size_t pos = referer.path.reverseFind('/');
+        const size_t pos = referer.path.reverseFind('/');
         if (pos == StringEx::npos) {
             throw std::logic_error("Invalid url: " + url + ", from " + referer.toString());
         }
@@ -48,7 +48,7 @@ bool Url::parseUrl(StringEx url) {
     // + //do.ma.in:port/lo/ca/ti/on?
     // + /lo/ca/ti/on?
     // - lo/ca/ti/on?
-    std::regex re("^(?:((?:[a-zA-Z0-9_]+:)?//)([a-zA-Z0-9\\.\\-@]+(?::\\d+)?))?((?:/.*)?)$");
+    static const std::regex re("^(?:((?:[a-zA-Z0-9_]+:)?//)([a-zA-Z0-9\\.\\-@]+(?::\\d+)?))?((?:/.*)?)$");
     std::smatch match;
 
     StringEx location;
@@ -89,8 +89,8 @@ void Url::parseLocation(StringEx location) {
 }
 
 void Url::normalize() {
-    auto array = path.split("/");
-    for (auto it = array.begin(); it != array.end(); ) {
+    std::vector<StringEx> array = path.split("/");
+    for (std::vector<StringEx>::iterator it = array.begin(); it != array.end(); ) {
         if (*it == ".") it = array.erase(it);
         else if (*it == "..") {
             if (it != array.begin() + 1) { // First element here IS '' before '/'.
