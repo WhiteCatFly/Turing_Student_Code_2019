@@ -15,7 +15,7 @@ Arguments parseArguments(int argc, char *argv[]) {
     Arguments arguments;
     ArgumentParser(argc, argv)
         .setProgramDescription("A web crawler to download a website's all webpages.")
-        .addPositional("root_url", "The beginning webpage's url.",
+        .addPositional("root_url", "The beginning webpage's URL.",
                        ArgumentParser::stringParser(arguments.rootUrl, [](const StringEx &url) -> std::optional<StringEx> {
                            try {
                                (Url(url));
@@ -39,7 +39,7 @@ Arguments parseArguments(int argc, char *argv[]) {
                    ArgumentParser::stringParser(arguments.indexSaveFilename),
                    true, "index.html")
         .addOption("crawling-regex", "r", "regex",
-                   "The regex used to find a page's next urls to crawl, matches case-insensitive. First capture group's value is used.",
+                   "The regex used to find a page's next URLs to crawl, matches case-insensitive. First non-empty capture group's value is used.",
                    ArgumentParser::stringParser(arguments.crawlingRegex),
                    true, "href\\s*=\\s*(?:\"(.*?)\"|'(.*?)'|([^>\\s\"']+))")
         .addOption("suffix-black-list", "b", "list",

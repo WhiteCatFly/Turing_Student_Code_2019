@@ -28,9 +28,14 @@ bool Crawler::checkFiltered(const Url &newUrl) {
 void Crawler::extractUrls(const StringEx &str, const std::function<void(const StringEx&)> &callback) {
     for (std::sregex_iterator it(str.begin(), str.end(), crawlingRegex); it != std::sregex_iterator(); it++) {
         auto &match = *it;
-        if (match[1].length()) callback((StringEx)match[1]);
-        else if (match[2].length()) callback((StringEx)match[2]);
-        else if (match[3].length()) callback((StringEx)match[3]);
+
+        for (size_t i = 1; i < match.size(); i++) {
+            StringEx str = match[i];
+            if (str.length()) {
+                callback(str);
+                break;
+            }
+        }
     }
 }
 
