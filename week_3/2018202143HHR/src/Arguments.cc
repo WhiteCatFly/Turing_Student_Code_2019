@@ -20,7 +20,7 @@ Arguments parseArguments(int argc, char *argv[]) {
                            try {
                                (Url(url));
                                return std::nullopt;
-                           } catch (std::logic_error e) {
+                           } catch (const std::logic_error &e) {
                                return StringEx(e.what());
                            }
                        }))
@@ -30,7 +30,7 @@ Arguments parseArguments(int argc, char *argv[]) {
                        try {
                            std::filesystem::create_directories((std::string)path);
                            return std::nullopt;
-                       } catch (std::filesystem::filesystem_error e) {
+                       } catch (const std::filesystem::filesystem_error &e) {
                            return StringEx(e.what());
                        }
                    }))
