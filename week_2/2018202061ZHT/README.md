@@ -1,1 +1,1 @@
-将crawl用多文件编译，包含内联函数，extern
+用makefile编译crawl，将网页保存在crawl.txt
