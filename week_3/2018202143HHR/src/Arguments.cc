@@ -45,7 +45,7 @@ Arguments parseArguments(int argc, char *argv[]) {
         .addOption("suffix-black-list", "b", "list",
                    "A list of filename suffixes that shouldn't be crawled, separated with comma.",
                    ArgumentParser::stringParser(arguments.suffixBlackList),
-                   true, ".css,.js,.png,.jpg,.bmp,.jpeg,.ico,.avi,.mp4,.mp3,.xls,.flv,.doc,.ppt,.xlsx,.docx,.pptx,.pdf,.rar,.zip,.7z")
+                   true, ".css,.js,.png,.jpg,.bmp,.gif,.jpeg,.ico,.avi,.mp4,.mp3,.xls,.flv,.doc,.ppt,.xlsx,.docx,.pptx,.pdf,.rar,.zip,.7z")
         .addOption("wget-command", "W", "path",
                    "The wget command path, if not in $PATH.",
                    ArgumentParser::stringParser(arguments.requestOptions.wgetCommand, [](const StringEx &path) -> std::optional<StringEx> {
