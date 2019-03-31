@@ -6,11 +6,11 @@ total time:14 minutes
 
 **********************************
 
->可以指定存储路径
+可以指定存储路径
 
->初次尝试了makefile,class和友元函数
+初次尝试了makefile,class和友元函数
 
->含三个class,分别为get,work,search
+含三个class,分别为get,work,search
 
 ***********************************
 
