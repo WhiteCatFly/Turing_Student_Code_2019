@@ -23,6 +23,10 @@ Personal settings added:
 	You are allowed to set the ROOT_URL and BANNER string in parsesettings.log.
 	The saving path is not added.
 
+	update log @ 18:35 4/1/2019
+	You are supposed to add a '/' at the end of the ROOT_URL.
+	You are supposed to add a ' ' at each end of a part of BANNER if this part appears at the end of the URL.
+
 That's all.
 
 You can test my program by:
@@ -30,9 +34,15 @@ You can test my program by:
 	./IW
 
 Result:
-(ATTENTION: this result was worse than expected. I tested this program in a very bad network environment so many pages were not donwloaded successfully.)
-ROOT_URL: http://econ.ruc.edu.cn
-Time : 39 minutes		number of pages: 5700+
+	(ATTENTION: this result was worse than expected. I tested this program in a very bad network environment so many pages were not donwloaded successfully.)
+	ROOT_URL: http://econ.ruc.edu.cn/
+	Time : 39 minutes		number of pages : 5700+
+	
+	update log @ 18:35 4/1/2019
+	(ATTENTION: I run this crawler in a better Internet environment @ 18:35 4/1/2019)
+	(But the environment is not that good as expected qwq)
+	ROOT_URL : http://econ.ruc.edu.cn/
+	Time : 27 minutes		number of pages : 5900+
 
 Next homework I plan to rewrite the Internet Crawler totally.
 More and more times of changing make the program a lot of chaos.
