@@ -1,37 +1,6 @@
-#include "tools.h"
 
-std::string get::get_content()             //获得网页内容
-{
+#include "work.h"
 
-    std::ifstream fin;
-
-    total_urls++;
-    std::cout << total_urls << std::endl;
-    
-    std::string content;
-    std::string line;
-
-    std::string order = "wget --timeout=3 --waitretry=0 --tries=5 \"";
-    std::string opn   = "\" -O ";
-    //std::string file  = "/home/halcyon/index.html";
-    
-    opn   += storage_path;
-    order += current;
-     
-    order += opn;
-    //cout<< order <<endl;
-    system (order.c_str());
-
-    fin.open(storage_path);
-    //cout<<fin.is_open(opn)<<endl;
-    while (getline(fin,line))
-        content += line;
-
-    fin.close();
-
-    return content;
-
-}
 
 inline void work::judge_slash()          //删除多余的slash
 {
@@ -191,62 +160,6 @@ void work::judge(std::string str_,int jump_mark)       //根据jump_mark处理pa
         
     }
     
-
-}
-
-inline void work::parse()           //正则表达式匹配
-{
-    std::regex  pattern("href=[\'\"]?([a-z0-9_:\\/.\\?=&]+)[\'\"]?");
-    std::regex  jump("window.location.href=\"([a-z0-9_:\\/.]+)\"");
-    
-
-    std::smatch res;
-    std::string _content = content;
-   
-    while(regex_search(_content,res,pattern))
-    {   
-       
-        //cout<< a[0].str() <<endl;
-        judge(res[1].str(),0);
-        //cout<< a[1].str() <<endl;
-        
-        _content = res.suffix();
-        
-    }
-    while(regex_search(content,res,jump))
-    {
-        
-        judge(res[1].str(),1);
-        content = res.suffix();
-
-    }
-
-}
-
-void search::bfs(get & get , work & operate, search & search)    //bfsbfsbfs
-{ 
-    fout.open("okk.txt");
-    //urls_tobe_clawed.push(root);
-     while (!urls_tobe_clawed.empty())
-     {
-         std::string current = urls_tobe_clawed.front();
-        
-         fout << current << std::endl;
-
-         get.set_current(current);
-         std::string content = get.get_content();
-
-         urls_tobe_clawed.pop();
-         urls_clawed.insert(current);
-        
-         operate.set(current, content, root);
-         operate.parse();
-         if_find(operate , search);
-
-     }
-      fout.close();
-
-
 
 }
 

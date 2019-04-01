@@ -1,12 +1,14 @@
 CC = g++
 
-all : main.o class.o distinguish.o tools.h
-	$(CC)  main.o class.o distinguish.o -o all
-main.o : main.cpp tools.h
+all : main.o get.o search.o work.o get.h search.h work.h
+	$(CC)  main.o work.o get.o search.o -o all
+main.o : main.cpp search.h get.h work.h
 	$(CC) -c main.cpp 
-class.o : class.cpp tools.h
-	$(CC) -c class.cpp 
-distinguish.o : distinguish.cpp tools.h
-	$(CC) -c distinguish.cpp
+get.o : get.cpp get.h
+	$(CC) -c get.cpp 
+work.o : work.cpp work.h
+	$(CC) -c work.cpp
+search.o : search.cpp search.h get.h work.h
+	$(CC) -c search.cpp	
 clean :
 	rm -rf *.o

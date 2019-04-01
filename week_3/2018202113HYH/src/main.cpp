@@ -1,4 +1,9 @@
-#include "tools.h"
+#include <ctime>
+#include <iostream>
+
+#include "search.h"
+#include "get.h"
+#include "work.h"
 
 int main()
 {   
