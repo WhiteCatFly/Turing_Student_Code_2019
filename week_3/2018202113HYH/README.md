@@ -1,8 +1,8 @@
 HomeWork3
 --
-total urls:7400+
+total urls: 7400+
 
-total time:14 minutes
+total time: 14 minutes
 
 **********************************
 
@@ -10,11 +10,11 @@ total time:14 minutes
 
 初次尝试了makefile,class和友元函数
 
-含三个class,分别为get,work,search
-
 ***********************************
 
-_代码非常混乱，不会取变量名_
+_代码非常混乱，但我真的尽力了_
+
+_orzorz改不动了，我下一次一定取正常一点的名字_
 
 
 
