@@ -1,10 +1,12 @@
 .PHONY:clean
 
-main:parse_url.o main.cpp head.h
-	g++ parse_url.o main.cpp -g -o main
-
-parse_url.o:parse_url.cpp
-	g++ -c parse_url.cpp
-
-clean:
-	-rm *.o main
+main : main.cpp head.h getcontent.o parse.o BFS.o
+	g++ -o main main.cpp getcontent.o parse.o BFS.o
+parse.o : parse.cpp
+	g++ -c parse.cpp
+getcontent.o : getcontent.cpp
+	g++ -c getcontent.cpp
+BFS.o : BFS.cpp
+	g++ -c BFS.cpp
+clean :
+	-rm  *.o *.html main

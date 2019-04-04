@@ -1,30 +1,32 @@
 #ifndef HEAD_H
 #define HEAD_H
+#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <string>
+#include <queue>
+#include <regex>
+#include <set>
 
-#include<iostream>
-#include<fstream>
-#include<string>
-#include<queue>
-#include<regex>
-#include<set>
-using namespace std;
-
-class parse_url
+void input_first_url(std::string &url);
+class crawl
 {
 private:
-    string current_url;
-    string content;
-    string root;
+  std::queue<std::string> todo;
+  std::set<std::string> done;
 
-    int match(string url) const;
-    int ifadjust( ) const;
-    string adjust(string url);
+  int n;
+  std::string current;
+  std::string root;
+
+  std::string getcontent();
+  int adjust(std::string &a_url);
+  void parse(std::string &content, std::set<std::string> &urls);
 public:
-    parse_url()=default;
-    parse_url(string &current_url_,string &root_);
-    ~parse_url();
-    void get_content(int &total);
-    void parse(set<string> &urls);
+  crawl()=default;
+  crawl(std::string root_);
+  ~crawl();
+  void BFS();
 };
-
 #endif
