@@ -1,7 +1,7 @@
 # HTMLParser
 ## intro
 
-A very naive HTMLParser
+A very naive HTMLParser  
 author: ZXK
 
 Feature
@@ -40,7 +40,7 @@ Texts.txt in current working directory
 
 ### To Do 
 +  处理网页注释（在本程序中，所有的注释被暴力的忽略了……
-+  提高鲁棒性（本程序对不"规范”的网页容错性一般……###
++  提高鲁棒性（本程序对不"规范”的网页容错性一般……
 
 ###设计思路
-参考了[W3C Dom]（https://www.w3.org/DOM/）
+参考了[W3C Dom](https://www.w3.org/DOM/)
