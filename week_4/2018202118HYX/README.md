@@ -6,3 +6,5 @@
 title类读取了HTML中title标签
 content类读取了标签 class="content" 的部分
 url类读取了有效url并进行了格式优化
+
+不会用树结构QAQ
