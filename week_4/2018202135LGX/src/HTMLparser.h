@@ -3,35 +3,83 @@
 
 #include<iostream>
 #include<string>
-#include<fstream>
-#include<algorithm>
-#include<regex>
-#include<sstream>
 #include<set>
+#include<fstream>
+
 
 class HTMLparser{
+
 private:
+
     std::string web_content;
+
     std::string title;
-    std::string body;
+
     std::string host;
+
     std::set<std::string> Img;
+
+    std::set<std::string> urls;
+
+    std::string::const_iterator iterStart;
+
+    std::string::const_iterator iterEnd;
+
+    std::string::const_iterator tempiter;
+
+    void GetContent();
+
 public:
-    HTMLparser(std::string url);
-    HTMLparser(std::ifstream fin);
+
+    HTMLparser(){};
+
+    HTMLparser(std::string &url){
+
+        host = url;
+
+        GetContent();
+
+        iterStart = web_content.begin();
+
+        iterEnd = web_content.end();
+
+        if(host.find("http") == std::string::npos){
+
+            host = "http://" + host;
+
+        }
+
+    };
+
+    HTMLparser(std::ifstream &fin){
+
+        while(!fin.eof()){
+
+            web_content += fin.get();
+
+        }
+
+        web_content.pop_back();
+
+    };
+
     void GetTitle();
+
     void GetBody();
+
     void GetImg();
-    std::string trans_URLs(std::string aurl);
-    std::string trans_URLs_for_Img(std::string aurl);
+
+    void Ini();
+
+    std::string trans_URLs(std::string aurl, int if_for_img);
+
+    ~HTMLparser(){};
+
 };
 
-std::string GetContent(std::string url);
 
-std::string RemoveTag(std::string str);
 
-std::string get_title(std::string str);
-
-std::string get_title_1(std::string str);
 
 #endif
+
+
