@@ -1,9 +1,19 @@
 
 #include"parser.h"
+Htmlparser::Htmlparser(std::string name)
+{
+        source=name;
+        mode=1;
+        std::cout<<"if you want title, press 1;"<<std::endl;
+        std::cout<<"if you want picture press 2;"<<std::endl;
+        std::cout<<"if you want urls press 3;"<<std::endl;
+        std::cout<<"if you want paragraph press 4;"<<std::endl;
+        std::cout<<"if you don't want anymore,press 0"<<std::endl;
+        readin();}
 void Htmlparser::readin()
 {
     if(mode==2)
-        return;
+        interface();
     std::string line;
     std::fstream fin;
     fin.open(source);
@@ -12,9 +22,28 @@ void Htmlparser::readin()
         std::cout<<"i get in";
         while(getline(fin,line))
             content+=line;
+        interface();
     }
     else{
         std::cout<<"fin in error";
+    }
+
+}
+void Htmlparser::interface()
+{
+    int choice;
+    std::cin>>choice;
+    while(choice!=0)
+    {
+        if(choice==1)
+            gettitle();
+        if(choice==2)
+            getpic();
+        if(choice==3)
+            geturl();
+        if(choice==4)
+            getpara();
+        std::cin>>choice;
     }
 
 }
