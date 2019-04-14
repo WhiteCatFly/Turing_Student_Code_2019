@@ -36,44 +36,44 @@ int main(){
     /* test minus */
     /* ------------------------- */
     // simple case
-    BigInteger bint_test7 = BigInteger(5) - BigInteger("3");
-    std::cout << bint_test7 << std::endl;
+    //BigInteger bint_test7 = BigInteger(5) - BigInteger("3");
+    //std::cout << bint_test7 << std::endl;
 
     // hard case
-    BigInteger bint_test8 = bint_test4 - bint_test1;
-    std::cout << bint_test8 << std::endl;
+    //BigInteger bint_test8 = bint_test4 - bint_test1;
+    //std::cout << bint_test8 << std::endl;
     // The answer is -5758317608407020460207 (test by python, hope it is correct)
     /* ------------------------- */
 
     /* test multiply */
     /* ------------------------- */
     // simple case
-    BigInteger bint_test9 = BigInteger(6) * BigInteger(7);
-    std::cout << bint_test9 << std::endl;
+    //BigInteger bint_test9 = BigInteger(6) * BigInteger(7);
+    //std::cout << bint_test9 << std::endl;
     // I don't want to show the answer
 
     // hard case
-    BigInteger bint_test10 = bint_test1 * bint_test4;
-    std::cout << bint_test10 << std::endl;
+    //BigInteger bint_test10 = bint_test1 * bint_test4;
+    //std::cout << bint_test10 << std::endl;
     // The answer is -818195659426580988627366073641532104291042
     /* ------------------------- */
     
     /* test division */
     /* ------------------------- */
     // simple case
-    BigInteger bint_test11_div = BigInteger(17) / BigInteger(4);
-    std::cout << bint_test11_div << std::endl;
+    //BigInteger bint_test11_div = BigInteger(17) / BigInteger(4);
+    //std::cout << bint_test11_div << std::endl;
     // 4
-    BigInteger bint_test11_mod = BigInteger(17) % BigInteger(4);
-    std::cout << bint_test11_mod << std::endl;
+    //BigInteger bint_test11_mod = BigInteger(17) % BigInteger(4);
+    //std::cout << bint_test11_mod << std::endl;
     // 1
 
     // hard case
-    BigInteger bint_test12_div = bint_test4 / bint_test1;
-    std::cout << bint_test12_div << std::endl;
+    //BigInteger bint_test12_div = bint_test4 / bint_test1;
+    //std::cout << bint_test12_div << std::endl;
     // the answer is -39
-    BigInteger bint_test12_mod = bint_test4 % bint_test1;
-    std::cout << bint_test12_mod << std::endl;
+    //BigInteger bint_test12_mod = bint_test4 % bint_test1;
+    //std::cout << bint_test12_mod << std::endl;
     // 72881856526312873113
     /* ------------------------- */
 
@@ -81,11 +81,11 @@ int main(){
     BigInteger bint_test13 = 23784687 + bint_test3;
     std::cout << bint_test13 << std::endl;
     // 233357118032
-    BigInteger bint_test14 = bint_test1 - 965713;
-    std::cout << bint_test14 << std::endl;
+    //BigInteger bint_test14 = bint_test1 - 965713;
+    //std::cout << bint_test14 << std::endl;
     // 145779986623332367620
-    BigInteger bint_test15 = 777 * bint_test1;
-    std::cout << bint_test15 << std::endl;
+    //BigInteger bint_test15 = 777 * bint_test1;
+    //std::cout << bint_test15 << std::endl;
     // 113271049606329999999741
 
     /* test cout */
