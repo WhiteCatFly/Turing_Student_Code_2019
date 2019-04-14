@@ -1,29 +1,90 @@
 #include "BigInt.h"
 #include <iostream>
+
 int main(){
-	using std::cout;
-	using std::endl;
+    /* construct by string */
+    BigInt<> bint_test1("145779986623333333333");
 
-	BigInt<int, 1000, 3> celebrate("20190504"); // test template parameters
-	cout << "celebrate: " << celebrate << endl;
-	cout << "time: "<< (19190504 - celebrate)/10000 << " years" << endl; // test int - BigInt
+    /* construct by 32bit-number */
+    BigInt<> bint_test2(19793565);
 
-	std::string strNum("19260817");
-	BigInt<> himNum(strNum); // test string constructor
-	cout << "him: " << himNum << endl;
-	cout << "-him: " << -himNum << endl; // test -BigNum
+    /* construct by 64bit-number */
+    BigInt<> bint_test3(233333333345);
 
-	BigInt<> neg(-1); // test long long constructor
-	unsigned flow = (unsigned) neg; // test explict cast
-	int noflow = (int) neg;
-	cout << "flow: " << flow << "\n" << "noflow: " << noflow << endl;
+    /* negative */
+    BigInt<> bint_test4("-5612537621783687126874");
 
+    /* test plus */
+    /* ------------------------- */
+    // simple case
+    BigInt<> bint_test_7 = BigInt<> (3) + BigInt<>("7");
 
-	BigInt<> mult = himNum * himNum; // test "*"
-	cout << "mult: him*him = " << mult << endl;
-	cout << "mult: him*him*him = " << himNum * himNum * himNum << endl;
+    // no carrying
+    BigInt<> bint_test5 = bint_test1 + bint_test3;
+    std::cout << bint_test5 << std::endl;
+    // The answer is 145779986856666666678
 
-	BigInt<> divi = himNum / 100; // test "/"
-	cout << "divi: " << divi << endl;
+    // many carryings
+    BigInt<> bint_test6 = BigInt<>("9999999999999999999999999999") + BigInt<>(1);
+    std::cout << bint_test6 << std::endl;
+    // everyone knows its answer
+    /* ------------------------- */
+
+    /* test minus */
+    /* ------------------------- */
+    // simple case
+    BigInt<> bint_test7 = BigInt<>(5) - BigInt<>("3");
+    std::cout << bint_test7 << std::endl;
+
+    // hard case
+    BigInt<> bint_test8 = bint_test4 - bint_test1;
+    std::cout << bint_test8 << std::endl;
+    // The answer is -5758317608407020460207 (test by python, hope it is correct)
+    /* ------------------------- */
+
+    /* test multiply */
+    /* ------------------------- */
+    // simple case
+    BigInt<> bint_test9 = BigInt<>(6) * BigInt<>(7);
+    std::cout << bint_test9 << std::endl;
+    // I don't want to show the answer
+
+    // hard case
+    BigInt<> bint_test10 = bint_test1 * bint_test4;
+    std::cout << bint_test10 << std::endl;
+    // The answer is -818195659426580988627366073641532104291042
+    /* ------------------------- */
+    
+    /* test division */
+    /* ------------------------- */
+    // simple case
+    BigInt<> bint_test11_div = BigInt<>(17) / BigInt<>(4);
+    std::cout << bint_test11_div << std::endl;
+    // 4
+
+    // hard case
+    BigInt<> bint_test12_div = bint_test4 / bint_test1;
+    std::cout << bint_test12_div << std::endl;
+    // the answer is -39
+    BigInt<> bint_test12_mod = bint_test4 % bint_test1;
+    std::cout << bint_test12_mod << std::endl;
+    // 72881856526312873113
+    /* ------------------------- */
+
+    /* test mixed operator */
+    BigInt<> bint_test13 = 23784687 + bint_test3;
+    std::cout << bint_test13 << std::endl;
+    // 233357118032
+    BigInt<> bint_test14 = bint_test1 - 965713;
+    std::cout << bint_test14 << std::endl;
+    // 145779986623332367620
+    BigInt<> bint_test15 = 777 * bint_test1;
+    std::cout << bint_test15 << std::endl;
+    // 113271049606329999999741
+
+    /* test cout */
+    std::cout << "Bint1 : " << bint_test1 << std::endl;
+    std::cout << "Bint2 : " << bint_test2 << std::endl;
+
 
 }
