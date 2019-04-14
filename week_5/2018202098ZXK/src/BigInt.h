@@ -28,6 +28,7 @@ public:
     BigInt operator+(const BigInt& r) const;
     BigInt operator*(const BigInt& r) const;
     BigInt operator/(const BigInt& r) const;
+    BigInt operator%(const BigInt& r) const;
 
 	template<typename TT>
     explicit operator TT() const;
@@ -206,6 +207,12 @@ BigInt<T, m, places> BigInt<T, m, places>::operator/(const BigInt<T, m, places>&
 		}
 	}
 	return res;
+}
+
+template<typename T, T m, unsigned places>
+BigInt<T, m, places> BigInt<T, m, places>::operator%(const BigInt<T, m, places>& r) const{
+	BigInt<> q = (*this) / r;
+	return (*this) - q * r;
 }
 
 template<typename T, T m, unsigned places>
