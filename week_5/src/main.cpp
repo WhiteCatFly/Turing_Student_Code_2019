@@ -1,6 +1,7 @@
 /*   c/c++ Declarations 
 *    add your own head files
 */
+#include "Biginteger.h"
 #include <iostream>
 
 int main(){
