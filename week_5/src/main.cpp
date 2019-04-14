@@ -1,10 +1,11 @@
-/*   c/c++ Declarations 
+std::cout << bint_test5 << std::endl;/*   c/c++ Declarations 
 *    add your own head files
 */
 #include "Biginteger.h"
 #include <iostream>
-
+#include <fstream>
 int main(){
+    
     /* construct by string */
     BigInteger bint_test1("145779986623333333333");
 
@@ -16,7 +17,8 @@ int main(){
 
     /* negative */
     BigInteger bint_test4("-5612537621783687126874");
-
+    ofstream os;
+    os.open("print.out");
     /* test plus */
     /* ------------------------- */
     // simple case
@@ -25,11 +27,13 @@ int main(){
     // no carrying
     BigInteger bint_test5 = bint_test1 + bint_test3;
     std::cout << bint_test5 << std::endl;
+    os << bint_test5 << std::endl;
     // The answer is 145779986856666666678
 
     // many carryings
     BigInteger bint_test6 = BigInteger("9999999999999999999999999999") + BigInteger(1);
     std::cout << bint_test6 << std::endl;
+    os << bint_test6 << std::endl;
     // everyone knows its answer
     /* ------------------------- */
 
@@ -80,6 +84,7 @@ int main(){
     /* test mixed operator */
     BigInteger bint_test13 = 23784687 + bint_test3;
     std::cout << bint_test13 << std::endl;
+    os <<  bint_test13 << std::endl;
     // 233357118032
     //BigInteger bint_test14 = bint_test1 - 965713;
     //std::cout << bint_test14 << std::endl;
@@ -91,7 +96,7 @@ int main(){
     /* test cout */
     std::cout << "Bint1 : " << bint_test1 << endl;
     std::cout << "Bint2 : " << bint_test2 << endl;
-
-
+    os << "Bint1 : " << bint_test1 << endl;
+    os << "Bint2 : " << bint_test2 << endl;
 }
 
