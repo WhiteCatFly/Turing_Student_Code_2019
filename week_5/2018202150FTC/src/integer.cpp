@@ -6,7 +6,7 @@
         res*=base;
     return res;
  }
- Integer::Integer(std::string init)
+ BigInteger::BigInteger(std::string init)
  {
      if(init[0]=='-')
      {
@@ -26,16 +26,16 @@
     
 
  }
- Integer Integer::operator++()
+ BigInteger BigInteger::operator++()
  {
      return *this+1;
  }
- Integer Integer::operator--()
+ BigInteger BigInteger::operator--()
  {
      return *this-1;
  }
  
-Integer::Integer(int init)
+/*BigInteger::BigInteger(int init)
 {
     std::stringstream ss;
     ss<<init;
@@ -47,15 +47,15 @@ Integer::Integer(int init)
     mode='+';
     } 
     
-}
-std::ostream & operator<<(std::ostream & os, Integer & showint)
+}*/
+std::ostream & operator<<(std::ostream & os, BigInteger & showint)
 {
     if(showint.mode=='-')
         os<<'-';
     os<<showint.getval();
     return os;
 }
-Integer::Integer(long long init)
+BigInteger::BigInteger(long long init)
 {
     std::stringstream ss;
     ss<<init;
@@ -67,7 +67,7 @@ Integer::Integer(long long init)
     mode='+';
     }
 }
-Integer operator-(const Integer & origin)
+BigInteger operator-(const BigInteger & origin)
 {
     if(origin.mode=='-')
         return origin.val;
@@ -85,10 +85,10 @@ Integer operator-(const Integer & origin)
     Integer add1_class=Integer(add1);
     return add1_class+add2;
 }*/
-Integer operator+(const Integer & add1,const Integer & add2)
+BigInteger operator+(const BigInteger & add1,const BigInteger & add2)
 {
     int i=add1.val.size()-1,j=add2.val.size()-1,k=0;
-    int a[10]={0};
+    int a[100]={0};
     int sign1,sign2;
     if(add1.mode=='+')
          sign1=1;
@@ -182,22 +182,22 @@ Integer operator+(const Integer & add1,const Integer & add2)
     return res;
     
 }
- Integer operator%(const Integer & dividend,const Integer & divisor)
+ BigInteger operator%(const BigInteger & dividend,const BigInteger & divisor)
  {
-     Integer quo=dividend/divisor;
-     Integer product=quo*divisor;
+     BigInteger quo=dividend/divisor;
+     BigInteger product=quo*divisor;
      return (dividend-product);
  }
-Integer operator/(const Integer & dividend,const Integer & divisor)
+BigInteger operator/(const BigInteger & dividend,const BigInteger & divisor)
 {
-    Integer dividend_copy=dividend;
-    Integer quo=0;
-    Integer divisor_copy=divisor;
+    BigInteger dividend_copy=dividend;
+    BigInteger quo=0;
+    BigInteger divisor_copy=divisor;
     while(dividend_copy.mode=='+')
     {
     //std::cout<<"dividend-copy is";
     //dividend_copy.show();
-    Integer time=power(10,dividend_copy.val.size()-divisor.val.size()-1);
+    BigInteger time=power(10,dividend_copy.val.size()-divisor.val.size()-1);
     //std::cout<<"time is";
     //time.show();
     divisor_copy=divisor*time;
@@ -212,19 +212,19 @@ Integer operator/(const Integer & dividend,const Integer & divisor)
     
     
 }
-Integer operator-(const Integer & sub1,const Integer & sub2)
+BigInteger operator-(const BigInteger & sub1,const BigInteger & sub2)
 {
-    Integer celes=-sub2;
+    BigInteger celes=-sub2;
     return sub1+celes;
 
     
 
 
 }
-Integer operator*(const Integer & mul1,const Integer & mul2)
+BigInteger operator*(const BigInteger & mul1,const BigInteger & mul2)
 {
     int i,j,k;
-    int a[20]={0};
+    int a[100]={0};
     for(i=0;i<mul1.val.size();i++)
         for(j=0;j<mul2.val.size();j++)
     a[mul1.val.size()-1-i+mul2.val.size()-1-j]+=(int)(mul1.val[i]-48)*(int)(mul2.val[j]-48);
@@ -243,6 +243,8 @@ Integer operator*(const Integer & mul1,const Integer & mul2)
         a[j]=swap;
     }
     std::stringstream ss;
+    if(mul1.mode!=mul2.mode)
+        ss<<'-';
     for(j=0;j<=k;j++)
      ss<<a[j];
        
