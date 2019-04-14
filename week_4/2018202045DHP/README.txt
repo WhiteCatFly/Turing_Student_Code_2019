@@ -24,4 +24,4 @@ How to use
     ./HP
 
 That's it.
-Time is really not enough so I haven't finishing improving my last week's work.
+Time is really not enough so I haven't finished improving my last week's work.
