@@ -1,5 +1,15 @@
-<font size=200>Usage</font>
+# Usage</font>
 
-<font size=10>1.Initializing</font>
+* Initializing
+
+You can initialize a BigInteger with long, const char* or std::string.
+
+* Calculating
+
+You can add two BigIntegers together, or add a BigInteger with another number.
+
+* Outputing
+
+You can output a BigInteger naturally with operator<<
 
 
