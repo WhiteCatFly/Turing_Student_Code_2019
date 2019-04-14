@@ -4,6 +4,9 @@ int main(){
 	using std::cout;
 	using std::endl;
 
+	BigInt<int, 1000, 3> celebrate("20190504"); // test template parameters
+	std::cout << "celebrate: " << celebrate << endl;
+
 	std::string strNum("19260817");
 	BigInt<> himNum(strNum); // test string constructor
 	cout << "him:" << himNum << endl;
