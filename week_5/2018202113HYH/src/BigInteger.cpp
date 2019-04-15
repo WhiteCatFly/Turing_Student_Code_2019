@@ -1,5 +1,6 @@
 #include "BigInteger.h"
-std::string change(int a)
+
+std::string change(long long int a)
 {
     std::string result;
     if(a == 0)
@@ -74,12 +75,12 @@ BigInteger BigInteger::operator+(BigInteger latter)
     
     if(len1 > len2) 
     {
-        latter.number = add_zero(latter.number,len2,len1);
+        latter_num = add_zero(latter_num,len2,len1);
         len = len1;
     }
     else
     {
-        number = add_zero(number,len1,len2);
+        former_num = add_zero(former_num,len1,len2);
         len = len2; 
     } 
     //std::cout << latter.number << std::endl;
