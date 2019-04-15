@@ -1,38 +1,38 @@
 #include"BigInteger.h"
 
-BigInteger::BigInteger(){
-    digits.push_back(0);
-}
+// BigInteger::BigInteger(){
+//     digits.push_back(0);
+// }
 
-BigInteger::BigInteger(int a){
-    digits.clear();
-    if(a == 0) digits.push_back(a);
-    while(a >= 1){
-        int temp = a % 10;
-        digits.push_back(temp);
-        a = (a - temp) / 10;
-    }
-}
+// BigInteger::BigInteger(int a){
+//     digits.clear();
+//     if(a == 0) digits.push_back(a);
+//     while(a >= 1){
+//         int temp = a % 10;
+//         digits.push_back(temp);
+//         a = (a - temp) / 10;
+//     }
+// }
 
-BigInteger::BigInteger(long int a){
-    digits.clear();
-    if(a == 0) digits.push_back(a);
-    while(a >= 1){
-        int temp = a % 10;
-        digits.push_back(temp);
-        a = (a - temp) / 10;
-    }
-}
+// BigInteger::BigInteger(long int a){
+//     digits.clear();
+//     if(a == 0) digits.push_back(a);
+//     while(a >= 1){
+//         int temp = a % 10;
+//         digits.push_back(temp);
+//         a = (a - temp) / 10;
+//     }
+// }
 
-BigInteger::BigInteger(long long int a){
-    digits.clear();
-    if(a == 0) digits.push_back(a);
-    while(a >= 1){
-        int temp = a % 10;
-        digits.push_back(temp);
-        a = (a - temp) / 10;
-    }
-}
+// BigInteger::BigInteger(long long int a){
+//     digits.clear();
+//     if(a == 0) digits.push_back(a);
+//     while(a >= 1){
+//         int temp = a % 10;
+//         digits.push_back(temp);
+//         a = (a - temp) / 10;
+//     }
+// }
 
 BigInteger::BigInteger(__int128_t a){
     digits.clear();
@@ -44,7 +44,7 @@ BigInteger::BigInteger(__int128_t a){
     }
 }
 
-BigInteger::BigInteger(const std::string str){
+BigInteger::BigInteger(const std::string &str){
     digits.clear();
     for(int i = str.length() - 1; i >= 0; i --){
         int temp = str[i] - '0';
@@ -61,33 +61,33 @@ BigInteger::BigInteger(const std::string str){
     }
 }
 
-BigInteger::BigInteger(const char *c_str){
-    digits.clear();
-    std::string str = c_str;
-    for(int i = str.length() - 1; i >= 0; i --){
-        int temp = str[i] - '0';
-        digits.push_back(temp);
-    }
-    while(1){
-        if(digits.back() == 0){
-            digits.pop_back();
-        }
-        else break;
-    }
-    if(digits.empty()){
-        digits.push_back(0);
-    }
-}
+// BigInteger::BigInteger(const char *c_str){
+//     digits.clear();
+//     std::string str = c_str;
+//     for(int i = str.length() - 1; i >= 0; i --){
+//         int temp = str[i] - '0';
+//         digits.push_back(temp);
+//     }
+//     while(1){
+//         if(digits.back() == 0){
+//             digits.pop_back();
+//         }
+//         else break;
+//     }
+//     if(digits.empty()){
+//         digits.push_back(0);
+//     }
+// }
 
-BigInteger::BigInteger(std::vector<int> &_digits){
-    this->digits = _digits;
-}
+// BigInteger::BigInteger(std::vector<int> &_digits){
+//     this->digits = _digits;
+// }
 
-BigInteger::BigInteger(const BigInteger &other){
-    this->digits = other.digits;
-}
+// BigInteger::BigInteger(const BigInteger &other){
+//     this->digits = other.digits;
+// }
 
-BigInteger BigInteger::operator+(BigInteger &other){
+BigInteger BigInteger::operator+(const BigInteger &other) const {
     std::vector<int>::const_iterator iter1 = other.digits.begin();
     std::vector<int>::const_iterator iter2 = digits.begin();
     std::vector<int> temp;
@@ -121,25 +121,25 @@ BigInteger BigInteger::operator+(BigInteger &other){
             i --;
         }
     }
-    BigInteger tmp(temp);
+    const BigInteger tmp(temp);
     return tmp;
 }
 
-BigInteger operator+(BigInteger &other,const long long int a){
+BigInteger operator+(const BigInteger &other,long long int a){
     BigInteger temp(a);
     BigInteger b;
     b = temp + other;
     return b;
 }
 
-BigInteger operator+(const long long int a, BigInteger &other){
+BigInteger operator+(long long int a, const BigInteger &other){
     BigInteger temp(a);
     BigInteger b;
     b = temp + other;
     return b;
 }
 
-std::ostream & operator<<(std::ostream &out, const BigInteger temp){
+std::ostream & operator<<(std::ostream &out, const BigInteger &temp){
     std::vector<int> tmp = temp.digits;
     while(!tmp.empty()){
         out << tmp.back();
@@ -147,6 +147,3 @@ std::ostream & operator<<(std::ostream &out, const BigInteger temp){
     }
     return out;
 }
-
-
-
