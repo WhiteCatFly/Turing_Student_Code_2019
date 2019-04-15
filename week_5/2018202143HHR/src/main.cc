@@ -55,6 +55,7 @@ int main(){
     // The answer is -818195659426580988627366073641532104291042
     /* ------------------------- */
     
+#ifdef I_HAVE_NOT_IMPLEMENTED_DIVISION
     /* test division */
     /* ------------------------- */
     // simple case
@@ -73,6 +74,7 @@ int main(){
     std::cout << bint_test12_mod << std::endl;
     // 72881856526312873113
     /* ------------------------- */
+#endif
 
     /* test mixed operator */
     BigInteger bint_test13 = 23784687 + bint_test3;
