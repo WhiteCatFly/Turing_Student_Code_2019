@@ -52,7 +52,7 @@ public:
         data.shrink_to_fit();
     }
 
-    std::string toString();
+    std::string toString() const;
 
     BigInteger operator-() const
     {
@@ -170,6 +170,27 @@ public:
     friend BigInteger operator-(const BigInteger& l, const BigInteger& r);
     friend BigInteger operator*(const BigInteger& l, const BigInteger& r);
 
+    BigInteger& operator=(long long val)
+    {
+        return ((*this) = valueOf(val));
+    }
+
+    BigInteger& operator=(const BigInteger& r)
+    {
+        negative = r.negative;
+        data = r.data;
+
+        return *this;
+    }
+
+    BigInteger& operator=(BigInteger&& r)
+    {
+        negative = r.negative;
+        data = std::move(r.data);
+
+        return *this;
+    }
+
     friend BigInteger abs(const BigInteger& l)
     {
         BigInteger ret = l;
@@ -191,6 +212,11 @@ public:
 
     static BigInteger valueOf(long long);
     static BigInteger valueOf(const std::string&);
+
+    friend std::ostream& operator<<(std::ostream& os, const BigInteger& bigint)
+    {
+        return os << bigint.toString();
+    }
 };
 }
 

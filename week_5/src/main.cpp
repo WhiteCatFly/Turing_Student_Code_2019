@@ -3,7 +3,12 @@
 */
 #include <iostream>
 
-int main(){
+#include "../2018202133HPY/src/Utils/BigInteger.hpp"
+
+using cowr::BigInteger;
+
+int main()
+{
     /* construct by string */
     BigInteger bint_test1("145779986623333333333");
 
@@ -35,7 +40,7 @@ int main(){
     /* test minus */
     /* ------------------------- */
     // simple case
-    BigInteger bint_test7 = BigInteger(5) - BigInteger("3");
+    bint_test7 = BigInteger(5) - BigInteger("3");
     std::cout << bint_test7 << std::endl;
 
     // hard case
@@ -56,7 +61,9 @@ int main(){
     std::cout << bint_test10 << std::endl;
     // The answer is -818195659426580988627366073641532104291042
     /* ------------------------- */
-    
+
+#ifdef TEST_DIV
+
     /* test division */
     /* ------------------------- */
     // simple case
@@ -76,6 +83,11 @@ int main(){
     // 72881856526312873113
     /* ------------------------- */
 
+    /* test cout */
+    std::cout << "Bint1 : " << bint_test1 << endl;
+
+#endif
+
     /* test mixed operator */
     BigInteger bint_test13 = 23784687 + bint_test3;
     std::cout << bint_test13 << std::endl;
@@ -88,9 +100,5 @@ int main(){
     // 113271049606329999999741
 
     /* test cout */
-    std::cout << "Bint1 : " << bint_test1 << endl;
-    std::cout << "Bint2 : " << bint_test2 << endl;
-
-
+    std::cout << "Bint2 : " << bint_test2 << std::endl;
 }
-

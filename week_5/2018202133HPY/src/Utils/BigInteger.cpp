@@ -15,7 +15,7 @@ BigInteger BigInteger::valueOf(long long x)
     if (x < 0)
         bigint.negative = true, x = -x;
 
-    int width = 0, temp = x;
+    long long width = 0, temp = x;
 
     while (temp)
         width++, temp /= base;
@@ -67,7 +67,7 @@ BigInteger BigInteger::valueOf(const std::string& x)
     return bigint;
 }
 
-std::string BigInteger::toString()
+std::string BigInteger::toString() const
 {
     std::stringstream ss;
 
@@ -94,7 +94,7 @@ BigInteger operator+(const BigInteger& l, const BigInteger& r)
         for (int i = 0; i < r.data.size(); i++)
             ret.data[i] += r.data[i];
 
-        for (int i = 0; i < ret.data.size(); i++) {
+        for (int i = 0; i + 1 < ret.data.size(); i++) {
             if (ret.data[i] >= cowr::BigInteger::base)
                 ret.data[i + 1] += ret.data[i] / cowr::BigInteger::base,
                     ret.data[i] %= cowr::BigInteger::base;
@@ -155,6 +155,9 @@ BigInteger operator-(const BigInteger& l, const BigInteger& r)
 BigInteger operator*(const BigInteger& l, const BigInteger& r)
 {
     BigInteger ret;
+
+    ret.negative = l.negative ^ r.negative;
+
     int width = l.data.size() + r.data.size();
     ret.data.resize(width, 0);
 
@@ -181,7 +184,7 @@ BigInteger operator*(const BigInteger& l, const BigInteger& r)
     for (int i = 0; i < width; i++)
         ret.data[i] = round(abs(buffer_l[i]));
 
-    for (int i = 0; i < ret.data.size(); i++) {
+    for (int i = 0; i + 1 < ret.data.size(); i++) {
         if (ret.data[i] >= cowr::BigInteger::base)
             ret.data[i + 1] += ret.data[i] / cowr::BigInteger::base,
                 ret.data[i] %= cowr::BigInteger::base;
