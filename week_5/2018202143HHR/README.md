@@ -1,4 +1,4 @@
-# HTML Parser
+# BigInteger
 The task of Advanced Programming class on 2019/04/04. C++ BigInteger class.
 
 # Requirements
