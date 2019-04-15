@@ -1,0 +1,9 @@
+This is a simple web page extractor. In the main.cpp, the user interface is written. Users can choose different input methods and extraction results according to their own needs according to page prompts. The input mode supports input from files, web sites and source code of web pages. The extraction results provide extraction title, extraction text and extraction of url and image links.It also supports custom regular expression extraction, and output the results to the file.
+
+In the parser.cpp,there is the constructor, and the extract.cpp is the public function in the class.
+
+Usage:
+
+./parser
+
+Then follow the interface prompt to operate.

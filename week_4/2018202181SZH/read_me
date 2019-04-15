@@ -1,0 +1,25 @@
+This is my homeworf for week_4.
+A html_parser.
+
+usage:
+    make
+	./all
+		input a url or a file name
+		input the path to save the content you want
+	then follow the instructions
+
+output:
+	the things you want to be parseed will be saved in the store_place you have inputed
+	
+fuction:
+	1.get url
+	2.get title
+	3.get main body
+	4.get things in certain pattern
+
+structure:
+	main.cpp :主函数
+	HTMLparser.h:类的声明
+	initialize.cpp : 类的初始化以及读入字符串（url / filename)的处理
+	get.cpp : 类中函数的定义
+		
