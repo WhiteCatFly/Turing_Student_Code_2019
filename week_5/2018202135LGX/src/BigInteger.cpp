@@ -1,39 +1,5 @@
 #include"BigInteger.h"
 
-// BigInteger::BigInteger(){
-//     digits.push_back(0);
-// }
-
-// BigInteger::BigInteger(int a){
-//     digits.clear();
-//     if(a == 0) digits.push_back(a);
-//     while(a >= 1){
-//         int temp = a % 10;
-//         digits.push_back(temp);
-//         a = (a - temp) / 10;
-//     }
-// }
-
-// BigInteger::BigInteger(long int a){
-//     digits.clear();
-//     if(a == 0) digits.push_back(a);
-//     while(a >= 1){
-//         int temp = a % 10;
-//         digits.push_back(temp);
-//         a = (a - temp) / 10;
-//     }
-// }
-
-// BigInteger::BigInteger(long long int a){
-//     digits.clear();
-//     if(a == 0) digits.push_back(a);
-//     while(a >= 1){
-//         int temp = a % 10;
-//         digits.push_back(temp);
-//         a = (a - temp) / 10;
-//     }
-// }
-
 BigInteger::BigInteger(__int128_t a){
     digits.clear();
     if(a == 0) digits.push_back(a);
