@@ -173,13 +173,13 @@ BigInteger operator*(const BigInteger& l, const BigInteger& r)
     for (int i = 0; i < r.data.size(); i++)
         buffer_r[i] = r.data[i];
 
-    FFT::FFT(buffer_l.data(), outer_width);
-    FFT::FFT(buffer_r.data(), outer_width);
+    FFT::FFT(buffer_l, outer_width);
+    FFT::FFT(buffer_r, outer_width);
 
     for (int i = 0; i < outer_width; i++)
         buffer_l[i] *= buffer_r[i];
 
-    FFT::iFFT(buffer_l.data(), outer_width);
+    FFT::iFFT(buffer_l, outer_width);
 
     for (int i = 0; i < width; i++)
         ret.data[i] = round(abs(buffer_l[i]));

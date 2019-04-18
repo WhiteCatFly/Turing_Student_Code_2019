@@ -8,7 +8,7 @@ namespace cowr {
 namespace FFT {
 
     template <typename Complex = std::complex<double>>
-    void build(Complex _P[], Complex P[], int n, int m, int curr, int& cnt)
+    void build(std::vector<Complex>& _P, std::vector<Complex>& P, int n, int m, int curr, int& cnt)
     {
         if (m == n)
             _P[curr] = P[cnt++];
@@ -18,18 +18,17 @@ namespace FFT {
     }
 
     template <typename Complex = std::complex<double>>
-    void FFT(Complex P[], int n, int oper = 1)
+    void FFT(std::vector<Complex>& P, int n, int oper = 1)
     {
         const static long double pi = acosl(-1);
 
         static std::vector<Complex> _P;
 
-        if (_P.size() < n)
-            _P.resize(n);
+        _P.resize(n);
 
         int cnt = 0;
-        build(_P.data(), P, n, 1, 0, cnt);
-        copy(_P.begin(), _P.end(), P);
+        build(_P, P, n, 1, 0, cnt);
+        copy(_P.begin(), _P.end(), P.begin());
         for (int d = 0; (1 << d) < n; d++) {
             int m = 1 << d;
             int m2 = m << 1;
@@ -49,7 +48,7 @@ namespace FFT {
     }
 
     template <typename Complex = std::complex<double>>
-    void iFFT(Complex P[], int n)
+    void iFFT(std::vector<Complex>& P, int n)
     {
         FFT(P, n, -1);
         for (int i = 0; i <= n; i++)
