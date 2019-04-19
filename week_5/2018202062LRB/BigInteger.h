@@ -13,7 +13,7 @@ public:
 	BigInteger(const std::string s);
 	BigInteger(long long v);
 	~BigInteger();
-	friend void swap(BigInteger &a, BigInteger &b);
+	friend void swap(BigInteger& a, BigInteger& b);
 	friend bool operator ==(const BigInteger a, const BigInteger b);
 	friend bool operator <(const BigInteger a, const BigInteger b);
 	friend bool operator <=(const BigInteger a, const BigInteger b);
@@ -24,7 +24,7 @@ public:
 	friend BigInteger operator *(BigInteger a, BigInteger b);
 	friend BigInteger operator /(BigInteger a, BigInteger b);
 	friend BigInteger operator %(BigInteger a, BigInteger b);
-	friend std::ostream & operator <<(std::ostream &os, BigInteger a);
+	friend std::ostream& operator <<(std::ostream& os, BigInteger a);
 };
 
 #endif
