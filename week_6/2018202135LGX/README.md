@@ -1,4 +1,9 @@
 # Instructions
 
 * 4 classes.
-  * t
+  * cmdparser:used to receive a command and translate it;
+  * GetContent:
+     * used to initialize the crawler
+     * used to help the crawler get the content from a specific website;
+  * HTMLparser:to judge a website is valid or not;
+  * Crawler:the core class used to search all possible path related to the given url and get them stored in an STL;
