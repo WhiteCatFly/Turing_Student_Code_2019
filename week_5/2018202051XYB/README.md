@@ -23,7 +23,7 @@ $ make check
 ## API
 
 ### `BigInteger::BigInteger`
-Construct a `BigInteger` object from a `int` or a `std::string`.
+Construct a `BigInteger` object from an `int` or a `std::string`.
 
 ```cpp
 //BigInteger::BigInteger(int x);
