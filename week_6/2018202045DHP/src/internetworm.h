@@ -5,7 +5,7 @@
 #include <queue>
 #include <set>
 
-#define OUT_INTERVAL 100
+#define OUT_INTERVAL 10
 #define EMPTY std::string(" ")
 #define SLASH '/'
 #define DOT '.'
