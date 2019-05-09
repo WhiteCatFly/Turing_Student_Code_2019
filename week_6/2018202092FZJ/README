@@ -1,0 +1,33 @@
+crawler
+
+1. Adding command-line controls, when the user calls the executable program,
+
+Use make to compile, then run with. / all.
+
+The parameters are acceptable after. / all. 
+
+The first parameter is the website root directory.
+
+The second and the third are the websites to be crawled recorded during the 
+
+last crawler run andURL of website that has been crawled
+
+2. After the whole crawler runs, the user enters what he needs according to the 
+
+prompt.
+
+The analysis of the website page address or host address, based on further
+
+tips to choose whether to extract the title, subject, or a specific part of the 
+
+website or source code.
+
+3. Breakpoint crawling is realized. As described in 1, when three parameters 
+
+are input, the breakpoint crawling is realized.
+
+4. Class inheritance and composition are used. Class duplication is used in the 
+
+reptile section.In addition, class inheritance is used in HTML Parser.
+
+5. Record exceptions and errors in the file down. log and date chronicles record
