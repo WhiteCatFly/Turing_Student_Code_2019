@@ -1,0 +1,2 @@
+Crawler:GetContent.h GetContent.cpp cmdparser.h cmdparser.cpp HTMLparser.h HTMLparser.cpp Crawler.h Crawler.cpp main.cpp 
+	g++ GetContent.h GetContent.cpp cmdparser.h cmdparser.cpp HTMLparser.h HTMLparser.cpp Crawler.h Crawler.cpp main.cpp -o Crawler
