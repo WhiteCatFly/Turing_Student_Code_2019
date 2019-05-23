@@ -1,0 +1,8 @@
+main
+download/
+.vscode
+log.txt
+sources.list
+data
+tmp
+
