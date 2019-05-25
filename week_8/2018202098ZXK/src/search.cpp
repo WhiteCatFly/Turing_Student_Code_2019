@@ -131,6 +131,7 @@ void initial(const char* namelist){
 
 void query(){
 	string queryline;
+	clock_t startTime, endTime;
 	vector<int> common_docs;
 	vector<string> terms;
 	vector<double> IDFs;
@@ -140,6 +141,7 @@ void query(){
 
 	//parse the queryline into terms
 	getline(cin, queryline);
+	startTime = clock();
 	if(!parseQueryLine(queryline, terms)){
 		cout << "sorry, we don't have what you want" << endl;
 		return;
@@ -165,10 +167,11 @@ void query(){
 
 	//sort the ranks
 	sort(ranks.begin(), ranks.end(), [](pair<int, double>& lhs, pair<int, double>& rhs){return lhs.second > rhs.second;});
-
+	
+	endTime = clock();
 	//output the ranks
 	for(auto &r: ranks){
 		cout << r.second << " " << titles[r.first] << endl;
 	}
-
+	cout << "The query time is: " <<(double)(endTime - startTime) / CLOCKS_PER_SEC << "s" << endl;
 }
