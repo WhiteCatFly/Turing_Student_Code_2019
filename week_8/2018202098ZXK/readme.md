@@ -25,3 +25,5 @@ $ make
 ## Description
 
 + query内容取交集
++ load时间1-2s
++ query时间 1e-4~1e-3
