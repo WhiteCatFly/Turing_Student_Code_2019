@@ -1,14 +1,14 @@
 # Homework 8
 A simple search engine.
 
-##Usage
+## Usage
 ```
 ./prog [folder]
 ```  
 将网页集放在`[folder]`文件夹下  
 并将THULAC的models放在当前目录下
 
-##Example
+## Example
 ```
 Model loaded succeed
 total words :62474 load time used : 90.0043
