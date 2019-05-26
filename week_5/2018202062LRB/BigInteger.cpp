@@ -4,6 +4,7 @@ using namespace std;
 
 BigInteger::BigInteger()
 {
+	minus = false;
 }
 
 BigInteger::BigInteger(const string s)
@@ -41,7 +42,7 @@ BigInteger::~BigInteger()
 {
 }
 
-void swap(BigInteger &a, BigInteger &b)
+void swap(BigInteger & a, BigInteger & b)
 {
 	BigInteger t = a;
 	a = b;
@@ -76,7 +77,7 @@ bool operator <(const BigInteger a, const BigInteger b)
 			break;
 		}
 	}
-	return (!a.minus) * f;
+	return (!a.minus)* f;
 }
 
 bool operator <=(const BigInteger a, const BigInteger b)
@@ -97,7 +98,7 @@ bool operator >(const BigInteger a, const BigInteger b)
 			break;
 		}
 	}
-	return (!a.minus) * f;
+	return (!a.minus)* f;
 }
 
 bool operator >=(const BigInteger a, const BigInteger b)
@@ -184,13 +185,13 @@ BigInteger operator /(BigInteger a, BigInteger b)
 	BigInteger ans;
 	bool tminus = a.minus ^ b.minus;
 	a.minus = b.minus = false;
-	for (int i = 1; i <= a.bit.size() - b.bit.size() + 1; i++) ans.bit.push_back(0);
+	for (int i = 1; i <= a.bit.size() - b.bit.size() + 2; i++) ans.bit.push_back(0);
 	for (int i = a.bit.size() - b.bit.size() + 1; i >= 0; i--)
 	{
-		int l = 0, r = 9, t = 0;
+		short l = 0, r = 9, t = 0;
 		while (l <= r)
 		{
-			int mid = (l + r) >> 1;
+			short mid = (l + r) >> 1;
 			ans.bit[i] = mid;
 			if (ans * b <= a)
 			{
@@ -212,7 +213,7 @@ BigInteger operator %(BigInteger a, BigInteger b)
 	return a - a / b * b;
 }
 
-ostream & operator <<(ostream &os, BigInteger a)
+ostream& operator <<(ostream & os, BigInteger a)
 {
 	if (a.minus) os << '-';
 	for (int i = a.bit.size() - 1; i >= 0; i--)
