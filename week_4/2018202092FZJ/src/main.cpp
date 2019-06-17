@@ -43,8 +43,8 @@ int main(){
                 cin >> url;
                 string order = "wget --tries=3 \"";
                 order += url;
-                order += "\"";
-                order += "-O"
+                order += "\" ";
+                order += "-O ";
                 order += url;
                 order += ".html";
                 system(order.c_str());
@@ -57,7 +57,7 @@ int main(){
                 cout << "The web page code has been entered into the program,and its tree structure has been saved to the file:TreeStructure _(The name of the web page).out" << endl;
                 
                 key3 == 1;
-                while(key3 != 0){
+                
                     cout << "Please select your action on this web page." << endl;
                     cout << "0.Return to the top." << endl;
                     cout << "1.Get the title." << endl;
@@ -90,17 +90,20 @@ int main(){
                             parser->Extract(regex(RegExp.c_str()), result);
                             break;
                     }
-
                     if(key3 != 0){
-                        ofstream fout("result.out");
+                        ofstream fout("result");
                         for(int i = 0; i < result.size(); i++){
                             fout << result[i] << endl;
                         }
                         fout.close();
                         cout << "The result has been output to result.out" << endl;
-                    }         
-                }
-            }
+                    }
+                    if(key3 == 1|| key3 == 2)
+                    {
+                        const char *sys = "./thulac <../result >../result.out";
+                        system(sys);
+                    }
+        }
             delete parser;
         }
     }
