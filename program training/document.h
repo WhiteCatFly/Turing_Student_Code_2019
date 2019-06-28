@@ -7,8 +7,8 @@ class Document{
     private:
         set <field> m_element;
     public:
-        void addField       (field x);
-        field searchField   (std::string x);
+        void AddField       (field x);
+        field SearchField   (std::string x);
 };
 
 #endif

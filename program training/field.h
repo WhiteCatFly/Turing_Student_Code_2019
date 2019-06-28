@@ -12,7 +12,7 @@ class Field{
         field(){}
         field(std::string x) m_name(x); {}
         ~field(){}
-        std::string accessName();
+        std::string AccessName();
 };
 
 #endif

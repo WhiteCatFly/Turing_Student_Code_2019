@@ -1,6 +1,6 @@
 #include <string>
 #include "field.h"
 
-std::string accessName(){
+std::string Field::AccessName(){
     return m_name;
 }
