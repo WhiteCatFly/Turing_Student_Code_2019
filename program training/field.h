@@ -3,7 +3,6 @@
 
 #include <string>
 
-
 class Field{
     friend bool operator < (field x, field y);
     private:

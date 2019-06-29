@@ -1,6 +1,7 @@
 #ifndef NUMBERFIELD_H_INCLUDED
 #define NUMBERFIELD_H_INCLUDED
 
+#include <string>
 #include "field.h"
 
 class NumberField : public Field{

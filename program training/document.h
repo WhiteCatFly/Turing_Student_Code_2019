@@ -1,6 +1,7 @@
 #ifndef DOCUMENT_H_INCLUDED
 #define DOCUMENT_H_INCLUDED
 
+#include <string>
 #include "field.h"
 
 class Document{
@@ -8,7 +9,7 @@ class Document{
         set <field> m_element;
     public:
         void AddField       (field x);
-        field SearchField   (std::string x);
+        Field SearchField   (std::string x);
 };
 
 #endif
