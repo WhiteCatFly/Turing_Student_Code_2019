@@ -1,17 +1,18 @@
 #ifndef DOCUMENT_H_INCLUDED
 #define DOCUMENT_H_INCLUDED
 
+#include <set>
 #include <string>
 #include "field.h"
 
 class Document{
     private:
         double m_val;
-        set <field> m_element;
+        std::set <Field> m_element;
     public:
         Document(){m_val = 0;}
         ~Document(){}
-        void AddField       (field x);
+        void AddField       (Field x);
         Field SearchField   (std::string x);
         void AddVal         (double x);
         void ClearVal       ();

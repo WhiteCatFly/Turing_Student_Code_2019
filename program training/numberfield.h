@@ -6,13 +6,13 @@
 
 class NumberField : public Field{
     private:
-        static double sm_eps = 0.01;
+        const double c_eps = 0.01;
         double m_val;
     public:
         NumberField(){}
-        NumberField(std::string name, double val) Field(name), m_val(val);
+        NumberField(std::string name, double val) : Field(name), m_val(val) {}
         ~NumberField(){}
-        bool AccurateSearch(double x, double range = sm_eps);
+        bool AccurateSearch(double x, double range = 0.01);
 };
 
 #endif

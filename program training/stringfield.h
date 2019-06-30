@@ -9,13 +9,14 @@ class StringField : public Field{
         std::string m_val;
     public:
         StringField(){}
-        StringField(std::string name, std::string val) Field(name), m_val(val) {}
+        StringField(std::string name, std::string val): Field(name), m_val(val) {}
         ~StringField(){}
         std::string AccessVal();
         bool Contain    (std::string x);
         bool Contain    (StringField x);
         bool Equal      (std::string x);
         bool Equal      (StringField x);
+        int Levenshtein (std::string x);
 //        bool match      (std::string x);
 };
 

@@ -3,16 +3,16 @@
 
 #include <string>
 #include "document.h"
-//#include <field.h>
+#include "field.h"
 
 class SearchEngine{
     private:
-        vector <Document> m_library;
+        std::vector <Document> m_library;
     public:
         SearchEngine(){}
         ~SearchEngine(){}
         void Initialize();
-        Search();//Interface is waiting for deciding.
-}
+        std::vector <Document> Search (std::vector <Field> lost);//Interface is waiting for deciding.
+};
 
 #endif

@@ -4,14 +4,15 @@
 #include <string>
 
 class Field{
-    friend bool operator < (field x, field y);
     private:
         std::string m_name;
     public:
-        field(){}
-        field(std::string x) m_name(x); {}
-        ~field(){}
+        Field(){}
+        Field(std::string x):m_name(x) {}
+        ~Field(){}
         std::string AccessName();
 };
+
+bool operator < (Field x, Field y);
 
 #endif
