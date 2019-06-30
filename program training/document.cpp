@@ -8,5 +8,5 @@ void Document::AddField(Field x){
 
 Field SearchField(std::string name){
     Field tmp = Field(name);
-    return * ((this -> element).find(name));
+    return * ((this -> element).find(tmp));
 }

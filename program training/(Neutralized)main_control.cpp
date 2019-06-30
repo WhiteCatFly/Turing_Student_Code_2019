@@ -6,5 +6,4 @@ vector <Document> library;
 
 int main(int argc, char **argv){
     LoadData(library);
-
 }
