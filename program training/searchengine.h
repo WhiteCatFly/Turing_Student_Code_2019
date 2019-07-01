@@ -12,7 +12,7 @@ class SearchEngine{
         SearchEngine(){}
         ~SearchEngine(){}
         void Initialize();
-        std::vector <Document> Search (std::vector <Field> lost);//Interface is waiting for deciding.
+        std::string Search (std::string information[8]);//Interface is waiting for deciding.
 };
 
 #endif

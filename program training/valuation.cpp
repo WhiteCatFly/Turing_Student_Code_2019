@@ -18,16 +18,17 @@
 #include "valuation.h"
 
 #include <iostream>
+#include <sstream>
 
 double MatchName (StringField *x, StringField *y){
-    if( x -> Equal( *y ) ) return FULLY_EQUALED;
-    else if( x -> Contain( *y ) ) return CONTAINED;
+    if( x -> Equal( *y ) ) return FULLY_EQUALED * 5;
+    else if( x -> Contain( *y ) ) return CONTAINED * 2;
     else return DIFFERENT;
 }
 
 double MatchGender (StringField *x, StringField *y){
-    if( x -> Equal( *y ) ) return FULLY_EQUALED;
-    else return DIFFERENT
+    if( x -> Equal( *y ) ) return FULLY_EQUALED * 3;
+    else return DIFFERENT;
 }
 
 double MatchLostDate(DateField *x, DateField *y){
@@ -39,13 +40,13 @@ double MatchLostDate(DateField *x, DateField *y){
 }
 
 double MatchHeight(NumberField *x, NumberField *y){
-    if( x -> AccurateCompare ( y -> AccessVal() ) ) return ACCURATE;
+    if( x -> AccurateCompare ( y -> AccessVal() , 0.01) ) return ACCURATE;
     if( x -> AccurateCompare ( y -> AccessVal() , 5.01 ) ) return DEVIATE;
     return DIFFERENT;
 }
 
 double MatchAge(NumberField *x, NumberField *y){
-    if( x -> AccurateCompare ( y -> AccessVal() ) ) return ACCURATE;
+    if( x -> AccurateCompare ( y -> AccessVal() , 0.01) ) return ACCURATE;
     if( x -> AccurateCompare ( y -> AccessVal() , 2.01 ) ) return DEVIATE;
     return DIFFERENT;
 }
@@ -58,9 +59,9 @@ double MatchBirthPlace(StringField *ori_x, StringField *ori_y){
     double total = 0;
     while(!ystream.eof()){
         ystream >> tmp;
-        if(x -> Contain(tmp)) matched ++;
-        tmp ++;
-    }if(matche == 0) return DIFFERENT;
+        if(ori_x -> Contain(tmp)) matched ++;
+        total ++;
+    }if(matched == 0) return DIFFERENT;
     return PLACEFORM(total, matched);
 }
 

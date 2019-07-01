@@ -13,6 +13,4 @@ class Field{
         std::string AccessName();
 };
 
-bool operator < (Field x, Field y);
-
 #endif

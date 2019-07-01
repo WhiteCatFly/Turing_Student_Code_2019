@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "stringfield.h"
 
 //name sex birthPlace lostPlace

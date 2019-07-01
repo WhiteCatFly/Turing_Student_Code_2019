@@ -13,7 +13,7 @@ class NumberField : public Field{
         NumberField(std::string name, double val) : Field(name), m_val(val) {}
         ~NumberField(){}
         double AccessVal();
-        bool AccuratCompare(double x, double range = 0.01);
+        bool AccurateCompare(double x, double range);
 };
 
 #endif

@@ -5,6 +5,7 @@
 #include "field.h"
 
 class DateField : public Field{
+    friend double MatchDate(DateField x, DateField y);
     private:
         int m_year, m_month, m_day;        
     public:
@@ -13,7 +14,6 @@ class DateField : public Field{
             Field(name), m_year(year), m_month(month), m_day(day)
         {}
         ~DateField(){}
-    friend int MatchDate(Date x, Date y);
 };
 
 #endif
