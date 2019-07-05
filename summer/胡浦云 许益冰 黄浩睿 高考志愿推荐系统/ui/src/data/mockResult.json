@@ -1,0 +1,26 @@
+[
+  {
+    "schoolID": 46,
+    "type": "冲刺",
+    "formerScores": [645, 653, 634, 643, 650],
+    "predictScore": 652
+  },
+  {
+    "schoolID": 31,
+    "type": "稳健",
+    "formerScores": [645, 653, 634, 643, 650],
+    "predictScore": 652
+  },
+  {
+    "schoolID": 125,
+    "type": "稳健",
+    "formerScores": [645, 653, 634, 643, 650],
+    "predictScore": 652
+  },
+  {
+    "schoolID": 140,
+    "type": "保底",
+    "formerScores": [645, 653, 634, 643, 650],
+    "predictScore": 652
+  }
+]

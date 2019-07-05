@@ -1,0 +1,317 @@
+* {
+  font-family: "Roboto", "Segoe UI", "Source Han Sans SC", "Microsoft Yahei UI", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+html, body, div#root {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fa-spin {
+  0% {
+      transform: rotate(0deg)
+  }
+
+  to {
+      transform: rotate(1turn)
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  #left-wrapper {
+    float: left;
+    width: 35%;
+    height: 100%;
+  }
+
+  #right-wrapper {
+    float: right;
+    width: 65%;
+    height: 100%;
+    position: relative;
+
+    .right-layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      transition: opacity 50ms linear, visibility 50ms linear;
+      opacity: 0;
+      visibility: hidden;
+
+      &.loading {
+        background-color: rgba(255, 255, 255, 0.8)
+      }
+
+      &[data-visible=true] {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .centered-wrapper {
+        display: table;
+        width: 100%;
+        height: 100%;
+
+        .centered {
+          width: 100%;
+          height: 100%;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          color: #444;
+
+          svg {
+            font-size: 60px;
+          }
+
+          div {
+            font-size: 20px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+input[type=text], input[type=number], select {
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  padding: 6px 6px 6px 7px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  -webkit-transition: all 100ms ease-in-out;
+  color: #333;
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &:focus {
+    border: 1px solid #aaa;
+    background-color: #fff;
+  }
+}
+
+select {
+  padding-left: 3px;
+  padding-top: 4px;
+}
+
+button {
+  color: #666;
+  background-color: #e8e8e8;
+  -webkit-transition: all 50ms ease-in-out;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  padding: 10px 35px 10px 35px;
+  user-select: none;
+
+  &:hover {
+    background-color: #ddd;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  &:active {
+    background-color: #c7c7c7;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+}
+
+span.switch-span-selected {
+  color: #000;
+}
+
+span.switch-span-unselected {
+  color: #ccc;
+
+  &:hover {
+    color: #999;
+  }
+
+  &:active {
+    color: #666;
+  }
+}
+
+.form-panel {
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  display: inline-block;
+
+  .svg-inline--fa {
+    margin-left: 1px;
+    margin-right: 8px;
+  }
+
+  .input-section {
+    margin: 30px;
+    font-size: 19px;
+
+    .title {
+      margin-bottom: 10px;
+      user-select: none;
+    }
+  }
+
+  .button-section {
+    width: 100%;
+    margin-top: 45px;
+    text-align: center;
+  }
+}
+
+ul.labels {
+  margin: 0;
+  padding: 0;
+
+  > li.label {
+    list-style: none;
+    display: inline-block;
+    font-size: 13px;
+    background-color: #eee;
+    margin: 5px;
+    padding: 3.5px 9.5px;
+    color: #444;
+    -webkit-transition: all 100ms ease-in-out;
+    user-select: none;
+
+    &:hover {
+      background-color: #d8d8d8;
+    }
+
+    &:active {
+      background-color: #c8c8c8;
+    }
+  }
+}
+
+.result-panel {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow-y: scroll;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 10px;
+  }
+
+  .list-item {
+    width: 100%;
+    position: relative;
+    height: 130px;
+    -webkit-transition: all 100ms ease-in-out, height 300ms ease-in-out;
+    overflow: hidden;
+
+    &[data-expanded="true"] {
+      height: 330px;
+    }
+
+    .svg-inline--fa {
+      margin-left: 1px;
+      margin-right: 6px;
+    }
+
+    &:hover {
+      background-color: #f8f8f8;
+
+      li.label:not(:hover) {
+        background-color: #e5e5e5;
+      }
+    }
+
+    &:not(:last-child)::after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      display: block;
+      margin-left: 10px;
+      width: calc(100% - 20px);
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .school-name {
+      position: absolute;
+      left: 125px;
+      top: 21px;
+      font-size: 18px;
+      user-select: none;
+    }    
+
+    .school-badge {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 80px;
+      height: 80px;
+      user-select: none;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .labels {
+      position: absolute;
+      top: 50px;
+      left: 120px;
+    }
+
+    .type {
+      font-size: 15px;
+      position: absolute;
+      top: 88px;
+      left: 125px;
+      user-select: none;
+
+      &.冲刺 {
+        color: #9c1515;
+      }
+
+      &.稳健 {
+        color: #9e812a;
+      }
+
+      &.保底 {
+        color: #1a8824;
+      }
+
+      .predicted-score {
+        font-size: 13px;
+        color: #888;
+        display: block;
+        position: relative;
+        top: -20.5px;
+        left: 70px;
+      }
+    }
+
+    .former-scores-chart {
+      width: calc(100% - 40px);
+      position: absolute;
+      top: 130px;
+      left: 28px;
+      height: 190px;
+    }
+  }
+}
