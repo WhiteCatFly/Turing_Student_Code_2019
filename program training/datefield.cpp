@@ -6,3 +6,7 @@ double MatchDate(DateField x, DateField y){
     if(x.m_day != y.m_day) return 2;
     return 3;
 }
+
+int DateField::AccessYear(){
+    return m_year;
+}

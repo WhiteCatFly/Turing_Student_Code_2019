@@ -16,7 +16,6 @@ class StringField : public Field{
         bool Contain    (StringField x);
         bool Equal      (std::string x);
         bool Equal      (StringField x);
-        int Levenshtein (std::string x);
 //        bool match      (std::string x);
 };
 

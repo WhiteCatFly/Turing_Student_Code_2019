@@ -35,7 +35,3 @@ bool StringField::Equal(std::string x){
 bool StringField::Equal(StringField x){
     return this -> Equal(x.AccessVal());
 }
-
-int StringField::Levenshtein(std::string x){
-
-}

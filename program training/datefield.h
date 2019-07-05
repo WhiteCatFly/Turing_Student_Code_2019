@@ -14,6 +14,7 @@ class DateField : public Field{
             Field(name), m_year(year), m_month(month), m_day(day)
         {}
         ~DateField(){}
+        int AccessYear();
 };
 
 #endif

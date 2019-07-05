@@ -24,3 +24,11 @@ double Document::AccessVal(){
 void Document::ClearVal(){
     m_val = 0;
 }
+
+void Document::EditID(std::string x){
+    m_ID = x;
+}
+
+std::string Document::AccessID(){
+    return m_ID;
+}

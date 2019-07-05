@@ -7,6 +7,7 @@
 
 class Document{
     private:
+        std::string m_ID;
         double m_val;
         std::vector <Field *> m_element;
     public:
@@ -17,6 +18,8 @@ class Document{
         void AddVal         (double x);
         double AccessVal    ();
         void ClearVal       ();
+        void EditID         (std::string x);
+        std::string AccessID   ();
 };
 
 #endif
