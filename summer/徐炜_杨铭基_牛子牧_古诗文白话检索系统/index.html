@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>古诗词白话检索系统</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/modernforms.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/themes/theme-red.css">
+        <link rel="stylesheet" href="css/result.css">
+        <link rel="stylesheet" type="text/css" href="css/to_top.css" />
+        <script type="text/javascript" src="js/to_top.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/request.js"></script>
+    </head>
+    <body class="mdn-bg">
+        <br>
+        <div align="center">
+            <img src="img/logo.png" height="100" width="100" align="center">
+            <span align="center" style="font-family: 楷体; font-size: 50px; vertical-align: middle">
+                <strong>
+                拾贝诗词检索网
+                </strong>
+            </span>
+        </div>
+        <div class="modern-forms">
+            <div class="modern-container">
+                <form id="myform">
+                    <fieldset>
+                        <div class="form-row">
+                            <div class="col col-12">
+                                <div class="field-group">
+                                    <input type="search" class="mdn-input" id="sentence" onkeydown='test()'>
+                                    <label class="mdn-label">搜索内容</label>
+                                    <span class="mdn-bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="mdn-footer">
+                        <button type="button" class="mdn-button btn-primary btn-raised" onclick="search()">搜索</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="modern-forms" style="background: transparent;">
+            <div class="modern-container" id="search_result" style="display:none" align="center" style="background: transparent;">
+                <span id="load"></span>
+            </div>
+        </div>
+        <a style="display:none" href="javascript:;" id="btn" title="回到顶部"></a>
+    </body>
+</html>

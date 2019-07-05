@@ -33,7 +33,7 @@ int Parser::Get_Href(vector<string> &result){
 int Parser::Get_Body(vector<string> &result){
     int i = 0, j = 0;
 	result.clear();
-	while((i = Source_Code.find("<body>", j)) != string::npos && (j = Source_Code.find("</body>", i)) != string::npos){
+	while((i = Source_Code.find("<body", j)) != string::npos && (j = Source_Code.find("</body>", i)) != string::npos){
 		result.push_back(Source_Code.substr(i + 6, j - i - 6));
 	}
 	return result.size();
