@@ -1,0 +1,1200 @@
+@font-face {
+	font-family:robotoregular;src:url(../fonts/roboto/roboto-regular-webfont.eot);src:url(http://advancestudios.com/modern-material/demos/fonts/roboto/roboto-regular-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/roboto/roboto-regular-webfont.woff2) format('woff2'),url(../fonts/roboto/roboto-regular-webfont.woff) format('woff'),url(../fonts/roboto/roboto-regular-webfont.ttf) format('truetype'),url(http://advancestudios.com/modern-material/demos/fonts/roboto/roboto-regular-webfont.svg#robotoregular) format('svg');font-weight:400;font-style:normal
+}
+
+@font-face {
+	font-family:robotothin;src:url(../fonts/roboto/roboto-thin-webfont.eot);src:url(http://advancestudios.com/modern-material/demos/fonts/roboto/roboto-thin-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/roboto/roboto-thin-webfont.woff2) format('woff2'),url(../fonts/roboto/roboto-thin-webfont.woff) format('woff'),url(../fonts/roboto/roboto-thin-webfont.ttf) format('truetype'),url(http://advancestudios.com/modern-material/demos/fonts/roboto/roboto-thin-webfont.svg#robotothin) format('svg');font-weight:400;font-style:normal
+}
+
+.mdn-bg {
+	background-repeat: no-repeat;
+    background-position: top;
+    background-image: url('../img/background.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.modern-forms,.modern-forms * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+.modern-forms {
+	font-family: robotoregular,Arial,Helvetica,sans-serif;
+	line-height: 1.231;
+	font-weight: 400;
+	font-size: 32px;
+}
+
+.modern-container {
+	margin: 50px auto;
+	max-width: 900px;
+	background: #fff;
+	padding: 50px 40px;
+	opacity: 0.7;
+}
+
+.modern-forms .mdn-shadow {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15),0 2px 10px 0 rgba(0,0,0,.15);
+	-moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15),0 2px 10px 0 rgba(0,0,0,.15);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.15),0 2px 10px 0 rgba(0,0,0,.15)
+}
+
+.modern-forms .mc1 {
+	max-width: 1024px
+}
+
+.modern-forms .mc2 {
+	max-width: 540px
+}
+
+.modern-forms .mdn-group {
+	margin-bottom: 20px
+}
+
+.modern-forms .field-group {
+	display: block;
+	position: relative;
+	margin-bottom: 20px
+}
+
+.modern-forms :not(output):-moz-ui-invalid,.modern-forms input:invalid {
+	box-shadow: none
+}
+
+.modern-forms button,.modern-forms input,.modern-forms label,.modern-forms select,.modern-forms textarea {
+	margin: 0;
+	font-size: 21px;
+	font-family: robotoregular,Arial,Helvetica,sans-serif;
+	font-weight: 400;
+	color: #34495E;
+	outline: 0
+}
+
+.modern-forms .mdn-input,.modern-forms .mdn-select>select,.modern-forms .mdn-selectmulti select,.modern-forms .mdn-textarea,.modern-forms input[type=button],.modern-forms input[type=submit],.modern-forms input[type=search] {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none
+}
+
+.modern-forms ::-webkit-input-placeholder {
+	color: #aaa
+}
+
+.modern-forms :-moz-placeholder {
+	color: #aaa
+}
+
+.modern-forms ::-moz-placeholder {
+	color: #aaa
+}
+
+.modern-forms :-ms-input-placeholder {
+	color: #aaa
+}
+
+.modern-forms .mdn-input.placeholder,.modern-forms .mdn-textarea.placeholder {
+	color: #aaa
+}
+
+.modern-forms .mdn-input,.modern-forms .mdn-select-multiple select,.modern-forms .mdn-select>select,.modern-forms .mdn-textarea {
+	background: 0 0;
+	position: relative;
+	vertical-align: top;
+	border: 1px solid #DBDBDB;
+	border-width: 0 0 1px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	color: #34495E;
+	outline: 0;
+	height: 46px;
+	width: 100%
+}
+
+.modern-forms input+.mdn-radio:before,.modern-forms input:checked+.mdn-checkbox,.modern-forms input:focus+.mdn-radio:before {
+	background: #009688
+}
+
+.modern-forms .mdn-select-multiple select {
+	width: 100%;
+	height: 110px;
+	padding: 10px 0
+}
+
+.modern-forms .mdn-select:after {
+	content: ' ';
+	position: absolute;
+	pointer-events: none;
+	border: solid transparent;
+	border-top-color: #B5B5B5;
+	border-width: 4px;
+	z-index: 100;
+	bottom: 10px;
+	right: 5px;
+	height: 0;
+	width: 0
+}
+
+.modern-forms .mdn-textarea {
+	resize: none;
+	line-height: 19px;
+	overflow: auto;
+	max-width: 100%;
+	padding: 12px 0;
+	height: 80px
+}
+
+.modern-forms .mdn-bar {
+	width: 100%;
+	position: absolute;
+	display: block;
+	bottom: 0
+}
+
+.modern-forms .mdn-bar:after,.modern-forms .mdn-bar:before {
+	content: '';
+	bottom: -1px;
+	position: absolute;
+	background: #009688;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	z-index: 2;
+	height: 2px;
+	width: 0
+}
+
+.modern-forms .mdn-upload {
+	display: block;
+	width: 100%
+}
+
+.modern-forms .mdn-upload .mdn-file {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	padding: 8px 10px;
+	position: absolute;
+	-moz-opacity: 0;
+	opacity: 0;
+	z-index: 11;
+	bottom: 0;
+	right: 0
+}
+
+.modern-forms .mdn-upload .mdn-button {
+	position: absolute;
+	top: 2px;
+	right: 0;
+	float: none;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 16px;
+	z-index: 10
+}
+
+.modern-forms .mdn-option {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px
+}
+
+.modern-forms .mdn-option>input {
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px,1px,1px,1px);
+	overflow: hidden;
+	opacity: 0;
+	left: 0
+}
+
+.modern-forms .mdn-checkbox,.modern-forms .mdn-radio {
+	position: relative;
+	margin-right: 2px;
+	display: inline-block;
+	border: 2px solid #B5B5B5;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	outline: 0;
+	height: 21px;
+	width: 21px;
+	top: 5px
+}
+
+.modern-forms .mdn-checkbox:before,.modern-forms .mdn-radio:before {
+	content: '';
+	display: block;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-o-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-transition: all .25s;
+	-moz-transition: all .25s;
+	transition: all .25s;
+	padding: 0;
+	margin: 0;
+	height: 0;
+	width: 0;
+	opacity: 0
+}
+
+.modern-forms .mdn-checkbox:before {
+	width: 0;
+	height: 0;
+	-webkit-transition: -webkit-transform .33s cubic-bezier(.55,0,.1,1);
+	-moz-transition: transform .33s cubic-bezier(.55,0,.1,1);
+	-ms-transition: transform .33s cubic-bezier(.55,0,.1,1);
+	-o-transition: transform .33s cubic-bezier(.55,0,.1,1);
+	transition: transform .33s cubic-bezier(.55,0,.1,1);
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	-ms-transform: rotate(0);
+	-o-transform: rotate(0);
+	transform: rotate(0)
+}
+
+.modern-forms input:checked+.mdn-checkbox:before {
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 8px;
+	height: 3px;
+	border: solid #fff;
+	border-width: 0 0 3px 3px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	opacity: 1
+}
+
+.modern-forms input:checked+.mdn-checkbox,.modern-forms input:checked+.mdn-radio {
+	border: 2px solid #009688
+}
+
+.modern-forms .mdn-radio {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px
+}
+
+.modern-forms input+.mdn-radio:before {
+	width: 11px;
+	height: 11px;
+	margin: 3px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	transform: scale(0);
+	opacity: 0
+}
+
+.modern-forms input:checked+.mdn-radio:before {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+	opacity: 1
+}
+
+.modern-forms input:focus+.mdn-checkbox,.modern-forms input:focus+.mdn-radio,.modern-forms input:hover+.mdn-checkbox,.modern-forms input:hover+.mdn-radio {
+	border-color: #009688
+}
+
+.modern-forms input:focus+.mdn-checkbox:before {
+	border-color: #fff
+}
+
+.modern-forms .option-tick .mdn-checkbox {
+	-webkit-transition: -webkit-transform .33s cubic-bezier(.55,0,.1,1);
+	-moz-transition: transform .33s cubic-bezier(.55,0,.1,1);
+	-ms-transition: transform .33s cubic-bezier(.55,0,.1,1);
+	-o-transition: transform .33s cubic-bezier(.55,0,.1,1);
+	transition: transform .33s cubic-bezier(.55,0,.1,1);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg)
+}
+
+.modern-forms .option-tick input:checked+.mdn-checkbox {
+	background: 0 0;
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	transform: rotate(0);
+	border: 0
+}
+
+.modern-forms .option-tick .mdn-checkbox:before,.modern-forms .option-tick input:checked+.mdn-checkbox:before {
+	width: 18px;
+	height: 8px;
+	border-color: #009688;
+	border-width: 0 0 2px 2px;
+	top: 0
+}
+
+.modern-forms .mdn-checkbox:after,.modern-forms .mdn-radio:after {
+	content: '';
+	width: 18px;
+	height: 18px;
+	background: 0 0;
+	position: absolute;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	left: 0;
+	top: 0
+}
+
+.modern-forms .mdn-checkbox:active:after,.modern-forms .mdn-option:active .mdn-checkbox:after,.modern-forms .mdn-option:active .mdn-radio:after,.modern-forms .mdn-radio:active:after,.modern-forms input[disabled]:checked+.mdn-checkbox:active:after,.modern-forms input[disabled]:checked+.mdn-option:active .mdn-checkbox:after,.modern-forms input[disabled]:checked+.mdn-option:active .mdn-radio:after,.modern-forms input[disabled]:checked+.mdn-radio:active:after {
+	-webkit-box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(128,128,128,.1);
+	-moz-box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(128,128,128,.1);
+	-o-box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(128,128,128,.1);
+	box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(128,128,128,.1)
+}
+
+.modern-forms input:checked+.mdn-checkbox:active:after,.modern-forms input:checked+.mdn-option:active .mdn-checkbox:after,.modern-forms input:checked+.mdn-option:active .mdn-radio:after,.modern-forms input:checked+.mdn-radio:active:after {
+	-webkit-box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(0,150,136,.2);
+	-moz-box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(0,150,136,.2);
+	-o-box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(0,150,136,.2);
+	box-shadow: 0 2px 8px transparent,0 0 0 24px rgba(0,150,136,.2)
+}
+
+.modern-forms .mdn-switch {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+	cursor: pointer
+}
+
+.modern-forms .mdn-switch input {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px,1px,1px,1px);
+	overflow: hidden;
+	height: inherit;
+	width: inherit;
+	opacity: 0;
+	left: 0
+}
+
+.modern-forms .mdn-switch .switch-label {
+	display: inline-block;
+	position: relative;
+	top: 2px
+}
+
+.modern-forms .mdn-switch>.switch-label {
+	padding-right: 5px
+}
+
+.modern-forms .mdn-switch .switch-toggle+.switch-label {
+	padding-left: 5px
+}
+
+.modern-forms .mdn-switch .switch-toggle {
+	width: 44px;
+	height: 16px;
+	position: relative;
+	display: inline-block;
+	background: rgba(0,0,0,.26);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.08),0 1px rgba(255,255,255,.5);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.08),0 1px rgba(255,255,255,.5);
+	-o-box-shadow: inset 0 1px 1px rgba(0,0,0,.08),0 1px rgba(255,255,255,.5);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.08),0 1px rgba(255,255,255,.5);
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	vertical-align: middle;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	cursor: pointer
+}
+
+.modern-forms .mdn-switch .switch-toggle::before {
+	content: '';
+	position: absolute;
+	top: -6px;
+	left: -4px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	-o-box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-o-border-radius: 26px;
+	border-radius: 26px
+}
+
+.modern-forms .mdn-switch input:checked+.switch-toggle {
+	background: rgba(0,150,136,.5)
+}
+
+.modern-forms .mdn-switch input:checked+.switch-toggle::before {
+	left: 20px;
+	background: #009688
+}
+
+.modern-forms .mdn-switch input:disabled+.switch-toggle {
+	background: #d5d5d5;
+	pointer-events: none
+}
+
+.modern-forms .mdn-switch input:disabled+.switch-toggle::before {
+	background: #bcbdbc
+}
+
+.modern-forms .mdn-switch input:disabled+.switch-toggle+.switch-label {
+	color: #D5D5D5
+}
+
+.modern-forms .modern-switch .switch-toggle {
+	width: 40px;
+	height: 24px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px
+}
+
+.modern-forms .modern-switch .switch-toggle::before {
+	width: 22px;
+	height: 22px;
+	bottom: 1px;
+	left: 1px;
+	top: 1px
+}
+
+.modern-forms .modern-switch input:checked+.switch-toggle::before {
+	left: 17px;
+	background: #fff
+}
+
+.modern-forms .modern-switch input:disabled+.switch-toggle::before {
+	background: #f5f5f5
+}
+
+.modern-forms .mdn-switch .switch-toggle:active::before,.modern-forms .mdn-switch input[disabled]:checked+.switch-toggle:active::before,.modern-forms .mdn-switch:active .switch-toggle::before,.modern-forms .mdn-switch:active input[disabled]:checked+.switch-toggle::before {
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(128,128,128,.1);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(128,128,128,.1);
+	-o-box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(128,128,128,.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(128,128,128,.1)
+}
+
+.modern-forms .mdn-switch input:checked+.switch-toggle:active::before,.modern-forms .mdn-switch:active input:checked+.switch-toggle::before {
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(0,150,136,.2);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(0,150,136,.2);
+	-o-box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(0,150,136,.2);
+	box-shadow: 0 2px 8px rgba(0,0,0,.28),0 0 0 20px rgba(0,150,136,.2)
+}
+
+.modern-forms .morph-switch .switch-toggle:active::before,.modern-forms .morph-switch input:checked+.switch-toggle:active::before,.modern-forms .morph-switch:active .switch-toggle:before,.modern-forms .morph-switch:active input:checked+.switch-toggle::before {
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	-o-box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	box-shadow: 0 1px 4px rgba(0,0,0,.18);
+	-webkit-transform: scale(1.15,.85);
+	-moz-transform: scale(1.15,.85);
+	-ms-transform: scale(1.15,.85);
+	-o-transform: scale(1.15,.85);
+	transform: scale(1.15,.85)
+}
+
+.modern-forms .mdn-bar:before {
+	left: 50%
+}
+
+.modern-forms .mdn-bar:after {
+	right: 50%
+}
+
+.modern-forms .append-icon .mdn-icon,.modern-forms .mdn-msg.right {
+	right: 0
+}
+
+.modern-forms .mdn-file:focus~.mdn-bar:after,.modern-forms .mdn-file:focus~.mdn-bar:before,.modern-forms .mdn-input:focus~.mdn-bar:after,.modern-forms .mdn-input:focus~.mdn-bar:before,.modern-forms .mdn-select-multiple select:focus~.mdn-bar:after,.modern-forms .mdn-select-multiple select:focus~.mdn-bar:before,.modern-forms .mdn-select>select:focus~.mdn-bar:after,.modern-forms .mdn-select>select:focus~.mdn-bar:before,.modern-forms .mdn-textarea:focus~.mdn-bar:after,.modern-forms .mdn-textarea:focus~.mdn-bar:before {
+	width: 50%
+}
+
+.modern-forms .field-group .mdn-label {
+	width: 100%;
+	position: absolute;
+	margin-bottom: 2px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	color: #496785;
+	left: 0
+}
+
+.modern-forms .field-group .mdn-label,.modern-forms .mdn-input:focus+.mdn-label,.modern-forms .mdn-input[placeholder]+.mdn-label,.modern-forms .mdn-label-pos .mdn-label,.modern-forms .mdn-select-multiple select+.mdn-label,.modern-forms .mdn-select-multiple select:focus+.mdn-label,.modern-forms .mdn-select>select+.mdn-label,.modern-forms .mdn-select>select:focus+.mdn-label,.modern-forms .mdn-textarea:focus+.mdn-label,.modern-forms .mdn-textarea[placeholder]+.mdn-label {
+	top: -10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.modern-forms .mdn-label-pos {
+	position: relative
+}
+
+.modern-forms .mdn-label-pos .mdn-label {
+	position: absolute;
+	margin-bottom: 2px;
+	color: #496785
+}
+
+.modern-forms .mdn-bottom-border {
+	border: 1px solid #DBDBDB;
+	border-width: 0 0 1px;
+	height: 46px
+}
+
+.modern-forms .mdn-bottom-border .mdn-option {
+	top: 4px
+}
+
+.modern-forms .mdn-auto {
+	height: auto;
+	padding-bottom: 20px
+}
+
+.modern-forms .mdn-auto .option-label {
+	line-height: 22px
+}
+
+.modern-forms .mdn-input:focus+.mdn-label,.modern-forms .mdn-select-multiple select:focus+.mdn-label,.modern-forms .mdn-select>select:focus+.mdn-label,.modern-forms .mdn-textarea:focus+.mdn-label,.modern-forms .mdn-upload .mdn-file:focus~.mdn-label {
+	color: #26A69A
+}
+
+.modern-forms .mdn-input[disabled]+.mdn-label,.modern-forms .mdn-input[disabled]~.mdn-icon i,.modern-forms .mdn-select-multiple select[disabled]+.mdn-label,.modern-forms .mdn-select>select[disabled]+.mdn-label,.modern-forms .mdn-select>select[disabled]~.mdn-icon i,.modern-forms .mdn-textarea[disabled]+.mdn-label,.modern-forms .mdn-textarea[disabled]~.mdn-icon i,.modern-forms .mdn-upload .mdn-file[disabled]~.mdn-icon i,.modern-forms .mdn-upload .mdn-file[disabled]~.mdn-label,.modern-forms input:disabled+.mdn-checkbox+.option-label,.modern-forms input:disabled+.mdn-radio+.option-label {
+	color: #D5D5D5
+}
+
+.modern-forms .mdn-input[disabled],.modern-forms .mdn-select-multiple select[disabled],.modern-forms .mdn-select>select[disabled],.modern-forms .mdn-textarea[disabled],.modern-forms .mdn-upload .mdn-file[disabled]+.mdn-input {
+	color: #D5D5D5;
+	border-color: #D5D5D5;
+	border-style: dotted
+}
+
+.modern-forms .mdn-input[disabled]~.mdn-bar,.modern-forms .mdn-select-multiple select[disabled]~.mdn-bar,.modern-forms .mdn-select>select[disabled]~.mdn-bar,.modern-forms .mdn-textarea[disabled]~.mdn-bar,.modern-forms .mdn-upload .mdn-file[disabled]+.mdn-input~.mdn-bar {
+	display: none
+}
+
+.modern-forms input:disabled::-webkit-input-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms input:disabled:-ms-input-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms input:disabled::-moz-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms input:disabled:-moz-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms textarea:disabled::-webkit-input-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms textarea:disabled:-ms-input-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms textarea:disabled::-moz-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms textarea:disabled:-moz-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms .mdn-upload .mdn-file[disabled]+input:-moz-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms .mdn-upload .mdn-file[disabled]+input::-moz-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms .mdn-upload .mdn-file[disabled]+input:-ms-input-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms .mdn-upload .mdn-file[disabled]+input::-webkit-input-placeholder {
+	color: #D5D5D5
+}
+
+.modern-forms .option-tick input:checked:disabled+.mdn-checkbox:before,.modern-forms input:disabled+.mdn-checkbox,.modern-forms input:disabled+.mdn-radio {
+	border-color: #D5D5D5
+}
+
+.modern-forms input:checked:disabled+.mdn-checkbox,.modern-forms input:checked:disabled+.mdn-radio:before {
+	background: #D5D5D5
+}
+
+.modern-forms .option-tick input:checked:disabled+.mdn-checkbox {
+	background: 0 0;
+	border: 0
+}
+
+.modern-forms .mdn-rating {
+	position: relative;
+	margin: 10px 0;
+	display: block
+}
+
+.modern-forms .mdn-rating label {
+	color: #BBB
+}
+
+.modern-forms .mdn-rating label i {
+	font-size: 17px;
+	text-align: center;
+	color: inherit
+}
+
+.modern-forms .mdn-rating label span {
+	font: 22px/22px Times,Serif
+}
+
+.modern-forms .star-l {
+	margin-left: 4px
+}
+
+.modern-forms .star-i {
+	position: absolute;
+	left: -9999px;
+	top: auto
+}
+
+.modern-forms .mdn-rating:hover .star-l:hover,.modern-forms .mdn-rating:hover .star-l:hover~.star-l,.modern-forms .star-i:checked~.star-l {
+	color: #2BBBAD
+}
+
+.modern-forms .mdn-rating:hover .star-l,.modern-forms .star-l {
+	width: 18px;
+	float: right;
+	display: block;
+	cursor: pointer;
+	color: #BBB
+}
+
+.modern-forms .mdn-rating:after,.modern-forms .mdn-rating:before {
+	line-height: 0;
+	display: table;
+	content: ""
+}
+
+.modern-forms .mdn-rating:after {
+	clear: both
+}
+
+.modern-forms .mdn-rating .mdn-rating-label {
+	font-size: 14px;
+	font-family: robotoregular,Arial,Helvetica,sans-serif;
+	display: inline-block;
+	font-weight: 400;
+	float: left
+}
+
+.modern-forms .mdn-rating-widget {
+	position: relative;
+	display: inline-block;
+	float: right;
+	margin-top: 0
+}
+
+.modern-forms .mdn-rating label span {
+	font-family: Arial,Helvetica,sans-serif;
+	text-shadow: 0 1px rgba(255,255,255,0);
+	-webkit-transition: margin .6s,opacity .6s;
+	-moz-transition: margin .6s,opacity .6s;
+	-ms-transition: margin .6s,opacity .6s;
+	-o-transition: margin .6s,opacity .6s;
+	transition: margin .6s,opacity .6s;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	white-space: nowrap;
+	position: absolute;
+	padding: 5px 10px;
+	font-weight: 700;
+	background: #34495E;
+	font-size: 11px;
+	margin-left: -5px;
+	margin-bottom: 15px;
+	display: block;
+	left: -9999px;
+	color: #fff;
+	opacity: 0;
+	z-index: 10
+}
+
+.modern-forms .mdn-rating label:hover span {
+	opacity: 1;
+	left: auto;
+	bottom: 100%;
+	margin-bottom: 5px
+}
+
+.modern-forms .mdn-rating label span:before {
+	content: '';
+	position: absolute;
+	border-top: 4px solid #34495E;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	left: 8px;
+	top: 100%
+}
+
+.modern-forms .mdn-button {
+	border: 0;
+	height: 46px;
+	color: #243140;
+	line-height: 1;
+	font-size: 21px;
+	cursor: pointer;
+	padding: 0 30px;
+	background: 0 0;
+	text-align: center;
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+	-webkit-user-drag: none;
+	text-transform: uppercase;
+	transition: all .55s ease-out;
+	-moz-transition: all .55s ease-out;
+	-webkit-transition: all .55s ease-out;
+	text-shadow: 0 1px rgba(255,255,255,.2);
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	overflow: hidden
+}
+
+.modern-forms .mdn-button:active,.modern-forms .mdn-button:hover,.modern-forms .mdn-upload .mdn-file:hover~.mdn-button {
+	color: #1d2938;
+	background: #EBEBEB
+}
+
+.modern-forms .mdn-button[disabled],.modern-forms .mdn-button[disabled]:active,.modern-forms .mdn-button[disabled]:hover,.modern-forms .mdn-upload .mdn-file[disabled]:hover~.mdn-button,.modern-forms .mdn-upload .mdn-file[disabled]~.mdn-button {
+	color: #D5D5D5;
+	background: 0 0
+}
+
+.modern-forms a.mdn-button,.modern-forms label.mdn-button,.modern-forms span.mdn-button {
+	line-height: 46px;
+	text-decoration: none
+}
+
+.modern-forms .mdn-button i {
+	font-size: 14px
+}
+
+.modern-forms .mdn-button-list .mdn-button {
+	margin-bottom: 5px
+}
+
+.modern-forms .mdn-group .mdn-button {
+	margin-bottom: 10px
+}
+
+.modern-forms .btn-flat {
+	color: #7BC6BF
+}
+
+.modern-forms .btn-flat:active,.modern-forms .btn-flat:hover {
+	color: #009688;
+	background: #EBEBEB
+}
+
+.modern-forms .btn-flat[disabled],.modern-forms .btn-flat[disabled]:active,.modern-forms .btn-flat[disabled]:hover,.modern-forms .mdn-upload .mdn-file[disabled]:hover~.btn-flat,.modern-forms .mdn-upload .mdn-file[disabled]~.btn-flat {
+	color: #A4D9D3;
+	background: 0 0
+}
+
+.modern-forms .btn-primary {
+	color: #fff;
+	background-color: #2BBBAD;
+	text-shadow: 0 1px rgba(0,0,0,.08)
+}
+
+.modern-forms .btn-primary:active,.modern-forms .btn-primary:focus,.modern-forms .btn-primary:hover,.modern-forms .mdn-upload .mdn-file:hover~.btn-primary {
+	background-color: #009688;
+	color: #fff
+}
+
+.modern-forms .btn-raised {
+	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+	-o-box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2);
+	box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 2px rgba(0,0,0,.2)
+}
+
+.modern-forms .btn-raised:active,.modern-forms .btn-raised:hover {
+	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+	-moz-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+	-o-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+	box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23)
+}
+
+.modern-forms .btn-primary[disabled],.modern-forms .btn-primary[disabled]:active,.modern-forms .btn-primary[disabled]:focus,.modern-forms .btn-primary[disabled]:hover,.modern-forms .mdn-upload .mdn-file[disabled]:hover~.btn-primary,.modern-forms .mdn-upload .mdn-file[disabled]~.btn-primary {
+	background-color: #A4D9D3;
+	color: #fff
+}
+
+.modern-forms .btn-raised[disabled],.modern-forms .btn-raised[disabled]:active,.modern-forms .btn-raised[disabled]:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none
+}
+
+.modern-forms .mdn-msg {
+	position: absolute;
+	bottom: -22px;
+	font-size: .7em;
+	line-height: 24px;
+	transition: all .55s ease-out;
+	-moz-transition: all .55s ease-out;
+	-webkit-transition: all .55s ease-out
+}
+
+.modern-forms .mdn-input:focus~.mdn-msg,.modern-forms .mdn-select-multiple select:focus~.mdn-msg,.modern-forms .mdn-select>select:focus~.mdn-msg,.modern-forms .mdn-textarea:focus~.mdn-msg,.modern-forms .mdn-upload .mdn-file:focus~.mdn-msg {
+	color: #26A69A
+}
+
+.modern-forms .mdn-input[disabled]~.mdn-msg,.modern-forms .mdn-select-multiple select[disabled]~.mdn-msg,.modern-forms .mdn-select>select[disabled]~.mdn-msg,.modern-forms .mdn-textarea[disabled]~.mdn-msg,.modern-forms .mdn-upload .mdn-file[disabled]~.mdn-msg {
+	color: #D5D5D5
+}
+
+.modern-forms .msg-hidden {
+	opacity: 0;
+	bottom: -42px
+}
+
+.modern-forms .mdn-input:focus~.msg-hidden,.modern-forms .mdn-select-multiple select:focus~.msg-hidden,.modern-forms .mdn-select>select:focus~.msg-hidden,.modern-forms .mdn-textarea:focus~.msg-hidden,.modern-forms .mdn-upload .mdn-file:focus~.msg-hidden {
+	opacity: 1;
+	bottom: -22px
+}
+
+.modern-forms .append-icon,.modern-forms .prepend-icon {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 100%
+}
+
+.modern-forms .append-icon .mdn-icon,.modern-forms .prepend-icon .mdn-icon {
+	top: 0;
+	z-index: 1;
+	width: 42px;
+	height: 42px;
+	color: inherit;
+	line-height: 42px;
+	position: absolute;
+	text-align: left;
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-ms-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+	pointer-events: none
+}
+
+.modern-forms .append-icon .mdn-icon i,.modern-forms .prepend-icon .mdn-icon i {
+	position: relative;
+	font-size: 14px;
+	color: #AEBCC6
+}
+
+.modern-forms .prepend-icon .mdn-icon {
+	left: 0
+}
+
+.modern-forms .prepend-icon>input,.modern-forms .prepend-icon>select,.modern-forms .prepend-icon>textarea {
+	padding-left: 20px
+}
+
+.modern-forms .mdn-select .mdn-icon {
+	line-height: 42px;
+	z-index: 99!important
+}
+
+.modern-forms .mdn-input:focus~.mdn-icon i,.modern-forms .mdn-select>select:focus~.mdn-icon i,.modern-forms .mdn-textarea:focus~.mdn-icon i,.modern-forms .mdn-upload .mdn-file:focus~.mdn-icon i {
+	color: #26A69A
+}
+
+.modern-forms .mdn-error .mdn-file:focus~.mdn-bar:after,.modern-forms .mdn-error .mdn-file:focus~.mdn-bar:before,.modern-forms .mdn-error .mdn-file~.mdn-bar:after,.modern-forms .mdn-error .mdn-file~.mdn-bar:before,.modern-forms .mdn-error .mdn-input:focus~.mdn-bar:after,.modern-forms .mdn-error .mdn-input:focus~.mdn-bar:before,.modern-forms .mdn-error .mdn-input~.mdn-bar:after,.modern-forms .mdn-error .mdn-input~.mdn-bar:before,.modern-forms .mdn-error .mdn-textarea:focus~.mdn-bar:after,.modern-forms .mdn-error .mdn-textarea:focus~.mdn-bar:before,.modern-forms .mdn-error .mdn-textarea~.mdn-bar:after,.modern-forms .mdn-error .mdn-textarea~.mdn-bar:before,.modern-forms .mdn-error.mdn-select-multiple select:focus~.mdn-bar:after,.modern-forms .mdn-error.mdn-select-multiple select:focus~.mdn-bar:before,.modern-forms .mdn-error.mdn-select-multiple select~.mdn-bar:after,.modern-forms .mdn-error.mdn-select-multiple select~.mdn-bar:before,.modern-forms .mdn-error.mdn-select>select:focus~.mdn-bar:after,.modern-forms .mdn-error.mdn-select>select:focus~.mdn-bar:before,.modern-forms .mdn-error.mdn-select>select~.mdn-bar:after,.modern-forms .mdn-error.mdn-select>select~.mdn-bar:before,.modern-forms .mdn-success .mdn-file:focus~.mdn-bar:after,.modern-forms .mdn-success .mdn-file:focus~.mdn-bar:before,.modern-forms .mdn-success .mdn-file~.mdn-bar:after,.modern-forms .mdn-success .mdn-file~.mdn-bar:before,.modern-forms .mdn-success .mdn-input:focus~.mdn-bar:after,.modern-forms .mdn-success .mdn-input:focus~.mdn-bar:before,.modern-forms .mdn-success .mdn-input~.mdn-bar:after,.modern-forms .mdn-success .mdn-input~.mdn-bar:before,.modern-forms .mdn-success .mdn-textarea:focus~.mdn-bar:after,.modern-forms .mdn-success .mdn-textarea:focus~.mdn-bar:before,.modern-forms .mdn-success .mdn-textarea~.mdn-bar:after,.modern-forms .mdn-success .mdn-textarea~.mdn-bar:before,.modern-forms .mdn-success.mdn-select-multiple select:focus~.mdn-bar:after,.modern-forms .mdn-success.mdn-select-multiple select:focus~.mdn-bar:before,.modern-forms .mdn-success.mdn-select-multiple select~.mdn-bar:after,.modern-forms .mdn-success.mdn-select-multiple select~.mdn-bar:before,.modern-forms .mdn-success.mdn-select>select:focus~.mdn-bar:after,.modern-forms .mdn-success.mdn-select>select:focus~.mdn-bar:before,.modern-forms .mdn-success.mdn-select>select~.mdn-bar:after,.modern-forms .mdn-success.mdn-select>select~.mdn-bar:before {
+	width: 50%
+}
+
+.modern-forms .mdn-error .mdn-icon i,.modern-forms .mdn-error .mdn-input+.mdn-label,.modern-forms .mdn-error .mdn-input:focus~.mdn-icon i,.modern-forms .mdn-error .mdn-input:focus~.mdn-msg,.modern-forms .mdn-error .mdn-msg,.modern-forms .mdn-error .mdn-textarea+.mdn-label,.modern-forms .mdn-error .mdn-textarea:focus~.mdn-icon i,.modern-forms .mdn-error .mdn-textarea:focus~.mdn-msg,.modern-forms .mdn-error.mdn-select-multiple select+.mdn-label,.modern-forms .mdn-error.mdn-select-multiple select:focus~.mdn-msg,.modern-forms .mdn-error.mdn-select>select+.mdn-label,.modern-forms .mdn-error.mdn-select>select:focus~.mdn-icon i,.modern-forms .mdn-error.mdn-select>select:focus~.mdn-msg,.modern-forms .mdn-error.mdn-upload .mdn-file:focus~.mdn-icon i,.modern-forms .mdn-error.mdn-upload .mdn-file:focus~.mdn-msg,.modern-forms .mdn-error.mdn-upload .mdn-file~.mdn-label {
+	color: #F44336
+}
+
+.modern-forms .mdn-error .mdn-bar:after,.modern-forms .mdn-error .mdn-bar:before,.modern-forms .mdn-error.mdn-upload .btn-primary,.modern-forms .mdn-error.mdn-upload .mdn-file:hover~.btn-primary {
+	background: #F44336
+}
+
+.modern-forms .mdn-error.mdn-select:after {
+	border-top-color: #F44336
+}
+
+.modern-forms .mdn-error.mdn-upload .mdn-file:focus~.btn-primary,.modern-forms .mdn-error.mdn-upload .mdn-file:hover~.btn-primary {
+	background: #D61B0C
+}
+
+.modern-forms .mdn-error .mdn-checkbox,.modern-forms .mdn-error .mdn-radio,.modern-forms .mdn-error input:focus+.mdn-checkbox,.modern-forms .mdn-error input:focus+.mdn-radio,.modern-forms .mdn-error input:hover+.mdn-checkbox,.modern-forms .mdn-error input:hover+.mdn-radio {
+	border-color: #F44336
+}
+
+.modern-forms .mdn-success .mdn-icon i,.modern-forms .mdn-success .mdn-input+.mdn-label,.modern-forms .mdn-success .mdn-input:focus~.mdn-icon i,.modern-forms .mdn-success .mdn-input:focus~.mdn-msg,.modern-forms .mdn-success .mdn-msg,.modern-forms .mdn-success .mdn-textarea+.mdn-label,.modern-forms .mdn-success .mdn-textarea:focus~.mdn-icon i,.modern-forms .mdn-success .mdn-textarea:focus~.mdn-msg,.modern-forms .mdn-success.mdn-select-multiple select+.mdn-label,.modern-forms .mdn-success.mdn-select-multiple select:focus~.mdn-msg,.modern-forms .mdn-success.mdn-select>select+.mdn-label,.modern-forms .mdn-success.mdn-select>select:focus~.mdn-icon i,.modern-forms .mdn-success.mdn-select>select:focus~.mdn-msg,.modern-forms .mdn-success.mdn-upload .mdn-file:focus~.mdn-icon i,.modern-forms .mdn-success.mdn-upload .mdn-file:focus~.mdn-msg,.modern-forms .mdn-success.mdn-upload .mdn-file~.mdn-label {
+	color: #2ECC71
+}
+
+.modern-forms .mdn-success .mdn-bar:after,.modern-forms .mdn-success .mdn-bar:before,.modern-forms .mdn-success.mdn-upload .btn-primary,.modern-forms .mdn-success.mdn-upload .mdn-file:hover~.btn-primary {
+	background: #2ECC71
+}
+
+.modern-forms .mdn-success.mdn-select:after {
+	border-top-color: #2ECC71
+}
+
+.modern-forms .mdn-success.mdn-upload .mdn-file:focus~.btn-primary,.modern-forms .mdn-success.mdn-upload .mdn-file:hover~.btn-primary {
+	background: #26AC60
+}
+
+.modern-forms .mdn-success .mdn-checkbox,.modern-forms .mdn-success .mdn-radio,.modern-forms .mdn-success input:focus+.mdn-checkbox,.modern-forms .mdn-success input:focus+.mdn-radio,.modern-forms .mdn-success input:hover+.mdn-checkbox,.modern-forms .mdn-success input:hover+.mdn-radio {
+	border-color: #2ECC71
+}
+
+.modern-forms .form-row {
+	margin: 0 -10px
+}
+
+.modern-forms .form-row:after,.modern-forms .form-row:before {
+	line-height: 0;
+	display: table;
+	content: ""
+}
+
+.modern-forms .form-row:after {
+	clear: both
+}
+
+.modern-forms .form-row .col {
+	min-height: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	float: left
+}
+
+.modern-forms .form-row .col-1 {
+	width: 8.33%
+}
+
+.modern-forms .form-row .col-2 {
+	width: 16.66%
+}
+
+.modern-forms .form-row .col-3 {
+	width: 25%
+}
+
+.modern-forms .form-row .col-4 {
+	width: 33.33%
+}
+
+.modern-forms .form-row .col-5 {
+	width: 41.66%
+}
+
+.modern-forms .form-row .col-6 {
+	width: 50%
+}
+
+.modern-forms .form-row .col-7 {
+	width: 58.33%
+}
+
+.modern-forms .form-row .col-8 {
+	width: 66.66%
+}
+
+.modern-forms .form-row .col-9 {
+	width: 75%
+}
+
+.modern-forms .form-row .col-10 {
+	width: 83.33%
+}
+
+.modern-forms .form-row .col-11 {
+	width: 91.66%
+}
+
+.modern-forms .form-row .col-12 {
+	width: 100%
+}
+
+.modern-forms .form-row .col-1-5 {
+	width: 20%
+}
+
+.modern-forms .form-row .col-1-8 {
+	width: 12.5%
+}
+
+.modern-forms fieldset {
+	border: none;
+	padding: 0;
+	margin: 0
+}
+
+.modern-forms fieldset legend {
+	border: none;
+	color: #7796B5;
+	font-size: 18px;
+	position: static;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	border-bottom: 4px solid #7796B5;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: 700;
+	width: 100%
+}
+
+.modern-forms fieldset fieldset legend {
+	border-bottom: 2px solid #404040;
+	font-weight: 400
+}
+
+.modern-forms fieldset fieldset fieldset legend {
+	border-bottom: 1px solid #404040;
+	font-weight: 400;
+	font-size: 15px
+}
+
+.modern-forms .mdn-footer {
+	display: block;
+	position: relative
+}
+
+.modern-forms .mdn-footer .mdn-button {
+	margin-bottom: 0
+}
+
+.modern-forms .block-group .mdn-option {
+	display: block;
+	padding-bottom: 8px
+}
+
+.modern-forms .block-label {
+	padding-bottom: 20px
+}
+
+.modern-forms .block-label .mdn-label {
+	top: 0
+}
+
+.modern-forms .mdn-section {
+	border-bottom: 1px solid #E7E7E7;
+	margin-bottom: 20px
+}
+
+.modern-forms .mdn-section .mdn-group {
+	margin-bottom: 15px
+}
+
+.modern-forms .block-group .mdn-switch {
+	display: block;
+	padding: 5px 0;
+	height: 34px
+}
+
+.modern-forms .pad-r {
+	padding-right: 40px
+}
+
+.modern-forms .pad-l {
+	padding-left: 40px
+}
+
+@media (max-width:860px) {
+	.modern-forms .form-row {
+		margin: 0
+	}
+
+	.modern-forms .form-row .col {
+		width: 100%;
+		float: none;
+		padding: 0
+	}
+
+	.modern-forms .mdn-bottom-border {
+		height: auto;
+		padding-bottom: 20px
+	}
+
+	.modern-forms .pad-r {
+		padding-right: 0
+	}
+
+	.modern-forms .pad-l {
+		padding-left: 0
+	}
+}
