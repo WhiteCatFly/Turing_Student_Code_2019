@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>364</width>
+    <height>268</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>90</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>省份</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>180</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确定</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>180</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>-10</y>
+      <width>54</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>54</width>
+      <height>111</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 9pt &quot;楷体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;春&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;风&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;得&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;意&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;马&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;蹄&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;疾&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>-10</y>
+      <width>54</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>54</width>
+      <height>111</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 9pt &quot;楷体&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;一&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;日&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;看&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;尽&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;长&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;安&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;花&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>-40</x>
+      <y>0</y>
+      <width>181</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/image/title.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>北京</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>天津</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>上海</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>重庆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>河北</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>山西</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>辽宁</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>吉林</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>黑龙江</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>江苏</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>浙江</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>安徽</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>福建</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>江西</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>山东</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>河南</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>湖北</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>湖南</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>广东</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>海南</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>四川</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>贵州</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>云南</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>陕西</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>甘肃</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青海</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>内蒙古</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>广西</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西藏</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>宁夏</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>新疆</string>
+     </property>
+    </item>
+   </widget>
+   <zorder>label_3</zorder>
+   <zorder>label_2</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>comboBox_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>364</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
