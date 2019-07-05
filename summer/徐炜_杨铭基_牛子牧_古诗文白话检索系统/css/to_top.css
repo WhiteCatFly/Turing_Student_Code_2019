@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box {
+    width:1000px;
+    margin:  0  auto;
+}
+#btn {
+    width:40px;
+    height: 40px;
+   position:fixed;
+    left:0%;
+    bottom:50px;
+    background:url(../img/to_top.png)  no-repeat  left top ;
+    margin-left: 100px;
+}
+#btn:hover {
+    background:url(../img/to_top.png)  no-repeat  left -40px;
+}
